@@ -1,3 +1,4 @@
+# Mini Project
 Smart Study Scheduler
 Team Members: Haroon, Siddiq, Tawfeeq
 Captain : Tawfeeq
