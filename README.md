@@ -9,3 +9,4 @@ Backend : Haroon (Head), Siddiq, Tawfeeq
 <br>
 Frontend: Siddiq (Head), Tawfeeq
 <br>
+We are all best friends!
