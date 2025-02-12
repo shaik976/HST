@@ -10,3 +10,7 @@ Backend : Haroon (Head), Siddiq, Tawfeeq
 Frontend: Siddiq (Head), Tawfeeq
 <br>
 We are all best friends!
+<br>
+We have to install git in Haroon's laptop
+<br>
+Login Tawfeeq's mail in Siddiq's Laptop
