@@ -1,6 +1,10 @@
 # Mini Project
 Smart Study Scheduler
 <br>
-Haroon Bhai please learn some python 😭🙏
+Tasks:
 <br>
-Tawfeeq maut dalrai tum
+Do backend
+<br>
+Do database
+<br>
+Add features
