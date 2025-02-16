@@ -2,4 +2,5 @@
 Smart Study Scheduler
 <br>
 Haroon Bhai please learn some python 😭🙏
-tawfeeq maut dalraa tum 
+<br>
+Tawfeeq maut dalrai tum
