@@ -1,14 +1,14 @@
-.deleteButton {
-    background-color: #ff1100;  /* Red background */
-    color: white;               /* White text */
-    border: none;               /* Remove border */
-    padding: 5px 10px;          /* Add padding */
-    cursor: pointer;           /* Change cursor to pointer */
-    border-radius: 5px;         /* Rounded corners */
-    font-size: 14px;            /* Font size */
-    transition: background-color 0.3s ease; /* Smooth color transition */
+/* Style for the delete button */
+.delete-btn {
+    background-color: gray; /* Gray button by default */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Some padding */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-.deleteButtonn:hover {
-    background-color: #ff0000;  /* Darker red on hover */
+/* Change button color to red on hover */
+.delete-btn:hover {
+    background-color: red; /* Red on hover */
 }
