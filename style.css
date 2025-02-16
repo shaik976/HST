@@ -1,6 +1,6 @@
 /* Style for the delete button */
 .delete-btn {
-    background-color: rgb(252, 49, 49); /* Gray button by default */
+    background-color: rgb(252, 49, 49); /* Red button by default */
     color: white; /* Text color */
     border: none; /* Remove border */
     padding: 5px 5px; /* Some padding */
@@ -8,7 +8,7 @@
     transition: background-color 0.1s ease; /* Smooth transition on hover */
 }
 
-/* Change button color to red on hover */
+/* Change button color to dark red on hover */
 .delete-btn:hover {
-    background-color: rgb(187, 0, 0); /* Red on hover */
+    background-color: rgb(187, 0, 0); /* Dark Red on hover */
 }
