@@ -15,7 +15,7 @@ form.addEventListener('submit', function (event) {
     
     // Create the delete button
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'X';
     deleteButton.classList.add('delete-btn');
     
     // Add event listener to the delete button
