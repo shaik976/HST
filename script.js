@@ -22,4 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = "sessions.html";
         }, 100); // Small delay ensures data is saved before redirecting
     });
-});
+}); // Code end for now
