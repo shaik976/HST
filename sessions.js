@@ -1,16 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const sessionsList = document.getElementById('sessions-list');
+    const form = document.getElementById('schedule-form');
 
-    // Retrieve sessions from localStorage
-    let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        const subject = document.getElementById('subject').value;
+        const date = document.getElementById('date').value;
+        const timeFrom = document.getElementById('timeFrom').value;
+        const timeTo = document.getElementById('timeTo').value;
 
-    if (sessions.length === 0) {
-        sessionsList.innerHTML = '<li>No scheduled sessions found.</li>';
-    } else {
-        sessions.forEach(session => {
-            const li = document.createElement('li');
-            li.textContent = `${session.subject} - ${session.date} | ${session.timeFrom} to ${session.timeTo}`;
-            sessionsList.appendChild(li);
-        });
-    }
+        let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+
+        // Add new session
+        sessions.push({ subject, date, timeFrom, timeTo });
+
+        // Save to localStorage
+        localStorage.setItem('sessions', JSON.stringify(sessions));
+
+        // Clear form after submission
+        form.reset();
+    });
 });
