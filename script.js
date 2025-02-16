@@ -1,34 +1,28 @@
-const form = document.getElementById('schedule-form');
-const scheduleList = document.getElementById('schedule-list');
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('schedule-form');
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    const subject = document.getElementById('subject').value;
-    const date = document.getElementById('date').value;
-    const timeFrom = document.getElementById('timeFrom').value;
-    const timeTo = document.getElementById('timeTo').value;
-    
-    // Create a new list item
-    const li = document.createElement('li');
-    li.textContent = `${subject} - ${date} | ${timeFrom} to ${timeTo}`;
-    
-    // Create the delete button
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'X';
-    deleteButton.classList.add('delete-btn');
-    
-    // Add event listener to the delete button
-    deleteButton.addEventListener('click', function() {
-        scheduleList.removeChild(li);
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const subject = document.getElementById('subject').value;
+        const date = document.getElementById('date').value;
+        const timeFrom = document.getElementById('timeFrom').value;
+        const timeTo = document.getElementById('timeTo').value;
+
+        // Create session object
+        const session = {
+            subject,
+            date,
+            timeFrom,
+            timeTo
+        };
+
+        // Retrieve existing sessions from localStorage
+        let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+        sessions.push(session);
+        localStorage.setItem('sessions', JSON.stringify(sessions));
+
+        // Redirect to the View Sessions page
+        window.location.href = '/sessions';
     });
-    
-    // Append the delete button to the list item
-    li.appendChild(deleteButton);
-    
-    // Append the list item to the schedule list
-    scheduleList.appendChild(li);
-    
-    // Optionally, clear the form fields after submission
-    form.reset();
 });

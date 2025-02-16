@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Sessions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sessions.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e9ecef;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .back-btn {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #01024e;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background: #00c92b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Scheduled Sessions</h1>
+        <ul id="sessions-list"></ul>
+        <button class="back-btn" onclick="window.location.href='fe.html'">Back</button>
+    </div>
+</body>
+</html>
