@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .scheduler {
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #01024e;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00c92b;
+        }
+        .view-sessions {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Study Scheduler</h1>
+        <div class="scheduler">
+            <h2>Schedule Your Study Session</h2>
+            <form id="schedule-form">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="timeFrom">Time From:</label>
+                <input type="time" id="timeFrom" required>
+
+                <label for="timeTo">Time To:</label>
+                <input type="time" id="timeTo" required>
+
+                <button type="submit">Add Session</button>
+            </form>
+        </div>
+        <div class="view-sessions">
+            <button onclick="window.location.href='sessions.html'">View Sessions</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
