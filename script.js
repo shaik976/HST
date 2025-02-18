@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 100); // Small delay ensures data is saved before redirecting
     });
 });
-
+//Bankai

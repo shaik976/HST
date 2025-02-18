@@ -51,3 +51,4 @@ def delete_schedule(user_id: str, subject: str):
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Schedule not found")
     return {"message": "Schedule deleted successfully"}
+#Bankai
