@@ -39,4 +39,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderSessions();
 });
-//Bankai
