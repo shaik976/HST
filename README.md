@@ -9,5 +9,3 @@ Do database
 <br>
 Add features
 <br>
-Baigan
-<br>
