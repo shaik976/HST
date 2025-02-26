@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('schedule-form');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault(); // Prevents default form submission
 
         const subject = document.getElementById('subject').value;
@@ -9,18 +9,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const timeFrom = document.getElementById('timeFrom').value;
         const timeTo = document.getElementById('timeTo').value;
 
-        let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+        const sessionData = { subject, date, timeFrom, timeTo };
 
-        // Add new session
-        sessions.push({ subject, date, timeFrom, timeTo });
+        try {
+            const response = await fetch('http://127.0.0.1:5000/add-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(sessionData),
+            });
 
-        // Save to localStorage
-        localStorage.setItem('sessions', JSON.stringify(sessions));
+            if (!response.ok) throw new Error('Failed to add session');
 
-        // Wait for storage to update, then redirect
-        setTimeout(() => {
-            window.location.href = "sessions.html";
-        }, 100); // Small delay ensures data is saved before redirecting
+            window.location.href = "sessions.html"; // Redirect after successful submission
+        } catch (error) {
+            console.error('Error:', error);
+        }
     });
 });
-//End of code

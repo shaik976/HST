@@ -1,16 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     const sessionsList = document.getElementById('sessions-list');
 
-    // Get sessions from local storage
-    let sessions = JSON.parse(localStorage.getItem('sessions')) || [];
-
-    function updateSessions() {
-        localStorage.setItem('sessions', JSON.stringify(sessions));
-        renderSessions();
+    async function fetchSessions() {
+        try {
+            const response = await fetch('http://127.0.0.1:5000/get-sessions');
+            if (!response.ok) throw new Error('Failed to fetch sessions');
+            return await response.json();
+        } catch (error) {
+            console.error('Error:', error);
+            return { sessions: [] };
+        }
     }
 
-    function renderSessions() {
+    async function deleteSession(index) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/delete-session/${index}`, {
+                method: 'DELETE',
+            });
+            if (!response.ok) throw new Error('Failed to delete session');
+            renderSessions(); // Refresh the list after deletion
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    async function renderSessions() {
         sessionsList.innerHTML = ""; // Clear existing sessions
+
+        const data = await fetchSessions();
+        const sessions = data.sessions;
 
         if (sessions.length === 0) {
             sessionsList.innerHTML = '<li>No scheduled sessions found.</li>';
@@ -25,10 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 deleteButton.classList.add('delete-btn');
 
                 // Delete button functionality
-                deleteButton.addEventListener('click', function () {
-                    sessions.splice(index, 1); // Remove session
-                    updateSessions(); // Save & refresh
-                });
+                deleteButton.addEventListener('click', () => deleteSession(index));
 
                 // Append delete button to list item
                 li.appendChild(deleteButton);
@@ -39,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderSessions();
 });
-//End
