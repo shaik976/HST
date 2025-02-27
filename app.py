@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request, abort
-from flask_cors import CORS  # To handle CORS Issues
+from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app)
 
 # In-memory storage for sessions
 sessions = []
@@ -26,13 +26,26 @@ def add_session():
 def get_sessions():
     return jsonify({"sessions": sessions})
 
-# Delete a session
+# Delete a session by index
 @app.route('/delete-session/<int:index>', methods=['DELETE'])
 def delete_session(index):
     if index < 0 or index >= len(sessions):
         abort(404, description="Session not found.")
     deleted_session = sessions.pop(index)
     return jsonify({"message": "Session deleted successfully!", "deleted_session": deleted_session})
+
+# Update a session by index
+@app.route('/update-session/<int:index>', methods=['PUT'])
+def update_session(index):
+    data = request.json
+    if index < 0 or index >= len(sessions):
+        abort(404, description="Session not found.")
+    if not data or not all(key in data for key in ['subject', 'date', 'timeFrom', 'timeTo']):
+        abort(400, description="Invalid data. Ensure 'subject', 'date', 'timeFrom', and 'timeTo' are provided.")
+    
+    # Update the session
+    sessions[index] = data
+    return jsonify({"message": "Session updated successfully!", "updated_session": sessions[index]})
 
 if __name__ == '__main__':
     app.run(debug=True)
