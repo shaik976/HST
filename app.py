@@ -28,3 +28,11 @@ def get_sessions():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#delete session
+@app.route('/delete-session/<int:index>', methods=['DELETE'])
+def delete_session(index):
+    if index < 0 or index >= len(sessions):
+        abort(404, description="Session not found.")
+    deleted_session = sessions.pop(index)
+    return jsonify({"message": "Session deleted successfully!", "deleted_session": deleted_session})
