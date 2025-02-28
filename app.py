@@ -1,12 +1,26 @@
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
 from datetime import datetime
+import os
+import json
 
 app = Flask(__name__)
 CORS(app)
 
-# In-memory storage for sessions
-sessions = []
+# File to store sessions data
+SESSIONS_FILE = 'sessions.json'
+
+# Load sessions from file or initialize an empty list
+def load_sessions():
+    if os.path.exists(SESSIONS_FILE):
+        with open(SESSIONS_FILE, 'r') as file:
+            return json.load(file)
+    return []
+
+# Save sessions to file
+def save_sessions(sessions):
+    with open(SESSIONS_FILE, 'w') as file:
+        json.dump(sessions, file, indent=4)
 
 # Helper function to validate session data
 def validate_session_data(data):
@@ -34,6 +48,8 @@ def add_session():
     if not validate_session_data(data):
         abort(400, description="Invalid data. Ensure 'subject', 'date', 'timeFrom', and 'timeTo' are provided in the correct format.")
     
+    sessions = load_sessions()
+    
     # Check for overlapping sessions
     for session in sessions:
         if session['date'] == data['date']:
@@ -41,25 +57,30 @@ def add_session():
                 abort(400, description="Session overlaps with an existing session.")
     
     sessions.append(data)
+    save_sessions(sessions)  # Save updated sessions to file
     return jsonify({"message": "Session added successfully!", "sessions": sessions}), 201
 
 # Get all sessions
 @app.route('/get-sessions', methods=['GET'])
 def get_sessions():
+    sessions = load_sessions()
     return jsonify({"sessions": sessions})
 
 # Delete a session by index
 @app.route('/delete-session/<int:index>', methods=['DELETE'])
 def delete_session(index):
+    sessions = load_sessions()
     if index < 0 or index >= len(sessions):
         abort(404, description="Session not found.")
     deleted_session = sessions.pop(index)
+    save_sessions(sessions)  # Save updated sessions to file
     return jsonify({"message": "Session deleted successfully!", "deleted_session": deleted_session})
 
 # Update a session by index
 @app.route('/update-session/<int:index>', methods=['PUT'])
 def update_session(index):
     data = request.json
+    sessions = load_sessions()
     if index < 0 or index >= len(sessions):
         abort(404, description="Session not found.")
     if not validate_session_data(data):
@@ -73,6 +94,7 @@ def update_session(index):
     
     # Update the session
     sessions[index] = data
+    save_sessions(sessions)  # Save updated sessions to file
     return jsonify({"message": "Session updated successfully!", "updated_session": sessions[index]})
 
 # Error handler for 400 Bad Request
