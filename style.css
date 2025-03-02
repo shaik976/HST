@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -22,10 +23,7 @@ h1, h2 {
     color: #333;
 }
 
-.scheduler {
-    margin-top: 20px;
-}
-
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -58,40 +56,112 @@ button:hover {
     background: #00c92b;
 }
 
-.view-sessions {
+/* Button Group Styles */
+.button-group {
     margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-/* Style for the delete button */
+.view-sessions-btn, .view-todo-btn, .back-btn, .refresh-btn, .todo-btn {
+    background: #01024e;
+    color: #fff;
+}
+
+.view-sessions-btn:hover, .view-todo-btn:hover, .back-btn:hover, .refresh-btn:hover, .todo-btn:hover {
+    background: #00c92b;
+}
+
+/* Sessions List Styles */
+#sessions-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sessions-list li {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .delete-btn {
-    background-color: rgb(252, 49, 49); /* Red button by default */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 5px 5px; /* Some padding */
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.1s ease; /* Smooth transition on hover */
-}
-
-/* Change button color to dark red on hover */
-.delete-btn:hover {
-    background-color: rgb(187, 0, 0); /* Dark Red on hover */
-}
-
-/* Style for error messages */
-.error-message {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: #ff4444;
     color: white;
-    padding: 10px 20px;
+    border: none;
+    padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    cursor: pointer;
 }
 
-/* Style for loading spinner */
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Todo List Styles */
+#todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.subject {
+    font-weight: bold;
+    color: #2d3436;
+}
+
+.priority {
+    font-weight: bold;
+}
+
+.task-details {
+    display: flex;
+    gap: 15px;
+    color: #636e72;
+    margin-bottom: 8px;
+}
+
+.task-meta {
+    font-size: 0.9em;
+    color: #74b9ff;
+}
+
+/* Priority Key Styles */
+.priority-key {
+    margin: 15px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.priority-key span {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.high { background-color: #ff6b6b; color: white; }
+.medium { background-color: #ffd93d; color: black; }
+.low { background-color: #2ff04f; color: white; }
+
+/* Loading Spinner Styles */
 .loading-spinner {
     position: fixed;
     top: 50%;
@@ -110,4 +180,31 @@ button:hover {
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Error and Success Message Styles */
+.error-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.success-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00c851;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }

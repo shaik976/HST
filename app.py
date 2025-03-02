@@ -3,12 +3,17 @@ from flask_cors import CORS
 from datetime import datetime
 import os
 import json
+import uuid
+from priority_model import TaskPrioritizer  # Import the prioritizer
 
 app = Flask(__name__)
 CORS(app)
 
 # File to store sessions data
 SESSIONS_FILE = 'sessions.json'
+
+# Initialize the TaskPrioritizer
+prioritizer = TaskPrioritizer()
 
 # Load sessions from file or initialize an empty list
 def load_sessions():
@@ -56,9 +61,12 @@ def add_session():
             if (data['timeFrom'] < session['timeTo'] and data['timeTo'] > session['timeFrom']):
                 abort(400, description="Session overlaps with an existing session.")
     
+    # Add a unique ID and calculate priority
+    data['id'] = str(uuid.uuid4())
+    data['priority'] = prioritizer.calculate_priority(data)
     sessions.append(data)
-    save_sessions(sessions)  # Save updated sessions to file
-    return jsonify({"message": "Session added successfully!", "sessions": sessions}), 201
+    save_sessions(sessions)
+    return jsonify({"message": "Session added successfully!", "session": data}), 201
 
 # Get all sessions
 @app.route('/get-sessions', methods=['GET'])
@@ -66,36 +74,28 @@ def get_sessions():
     sessions = load_sessions()
     return jsonify({"sessions": sessions})
 
-# Delete a session by index
-@app.route('/delete-session/<int:index>', methods=['DELETE'])
-def delete_session(index):
+# Delete a session by ID
+@app.route('/delete-session/<string:session_id>', methods=['DELETE'])
+def delete_session(session_id):
     sessions = load_sessions()
-    if index < 0 or index >= len(sessions):
+    session_to_delete = next((session for session in sessions if session.get('id') == session_id), None)
+    
+    if not session_to_delete:
         abort(404, description="Session not found.")
-    deleted_session = sessions.pop(index)
-    save_sessions(sessions)  # Save updated sessions to file
-    return jsonify({"message": "Session deleted successfully!", "deleted_session": deleted_session})
+    
+    sessions.remove(session_to_delete)
+    save_sessions(sessions)
+    return jsonify({
+        "message": "Session deleted successfully!",
+        "deleted_session": session_to_delete
+    })
 
-# Update a session by index
-@app.route('/update-session/<int:index>', methods=['PUT'])
-def update_session(index):
-    data = request.json
+# Get prioritized tasks
+@app.route('/prioritize-tasks', methods=['GET'])
+def prioritize_tasks():
     sessions = load_sessions()
-    if index < 0 or index >= len(sessions):
-        abort(404, description="Session not found.")
-    if not validate_session_data(data):
-        abort(400, description="Invalid data. Ensure 'subject', 'date', 'timeFrom', and 'timeTo' are provided in the correct format.")
-    
-    # Check for overlapping sessions (excluding the current session being updated)
-    for i, session in enumerate(sessions):
-        if i != index and session['date'] == data['date']:
-            if (data['timeFrom'] < session['timeTo'] and data['timeTo'] > session['timeFrom']):
-                abort(400, description="Updated session overlaps with an existing session.")
-    
-    # Update the session
-    sessions[index] = data
-    save_sessions(sessions)  # Save updated sessions to file
-    return jsonify({"message": "Session updated successfully!", "updated_session": sessions[index]})
+    prioritized = prioritizer.prioritize_tasks(sessions)
+    return jsonify({"prioritized_tasks": prioritized})
 
 # Error handler for 400 Bad Request
 @app.errorhandler(400)
