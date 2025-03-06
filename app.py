@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, abort
 from flask_cors import CORS
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import json
 import uuid
@@ -92,6 +92,52 @@ def delete_session(session_id):
         "message": "Session deleted successfully!",
         "deleted_session": session_to_delete
     })
+
+# Add timetable data as sessions
+@app.route('/add-timetable', methods=['POST'])
+def add_timetable():
+    data = request.json
+    if not data or 'timetable' not in data:
+        abort(400, description="Invalid data. Timetable data is required.")
+
+    sessions = load_sessions()
+    timetable = data['timetable']
+
+    for entry in timetable:
+        # Extract day, time, and subject
+        day = entry['day']
+        time_range = entry['time']
+        subject = entry['subject']
+
+        # Convert day and time into a valid date and time format
+        # For simplicity, assume the timetable is for the current week
+        today = datetime.now()
+        days_in_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        day_index = days_in_week.index(day)
+        session_date = (today + timedelta(days=(day_index - today.weekday()))).strftime('%Y-%m-%d')
+
+        # Split time range into start and end times
+        time_from, time_to = time_range.split(' - ')
+
+        # Create session data
+        session_data = {
+            'subject': subject,
+            'date': session_date,
+            'timeFrom': time_from,
+            'timeTo': time_to,
+        }
+
+        # Validate and add the session
+        if validate_session_data(session_data):
+            session_data['id'] = str(uuid.uuid4())
+            priority = prioritizer.calculate_priority(session_data)
+            if priority is not None:
+                session_data['priority'] = priority
+                sessions.append(session_data)
+
+    # Save the updated sessions
+    save_sessions(sessions)
+    return jsonify({"message": "Timetable saved and sessions added successfully!"}), 201
 
 # Get prioritized tasks
 @app.route('/prioritize-tasks', methods=['GET'])

@@ -14,13 +14,38 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Save timetable data to local storage
-    function saveTimetable() {
+    // Save timetable data to local storage and send to backend
+    async function saveTimetable() {
+        const timetableData = [];
         inputs.forEach((input) => {
             const key = input.parentElement.parentElement.rowIndex + "-" + input.parentElement.cellIndex;
-            localStorage.setItem(key, input.value);
+            const value = input.value.trim();
+            if (value) {
+                localStorage.setItem(key, value);
+
+                // Extract day, time, and subject
+                const day = input.parentElement.parentElement.cells[0].textContent;
+                const time = input.parentElement.cells[0].textContent;
+                const subject = value;
+
+                timetableData.push({ day, time, subject });
+            }
         });
-        alert("Timetable saved successfully!");
+
+        // Send timetable data to the backend
+        try {
+            const response = await fetch('http://127.0.0.1:5000/add-timetable', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ timetable: timetableData }),
+            });
+
+            if (!response.ok) throw new Error('Failed to save timetable to backend');
+            alert("Timetable saved successfully and sessions added!");
+        } catch (error) {
+            console.error('Error:', error);
+            alert("Failed to save timetable to backend. Please try again.");
+        }
     }
 
     // Attach event listener to the save button
