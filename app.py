@@ -63,7 +63,10 @@ def add_session():
     
     # Add a unique ID and calculate priority
     data['id'] = str(uuid.uuid4())
-    data['priority'] = prioritizer.calculate_priority(data)
+    priority = prioritizer.calculate_priority(data)
+    if priority is None:
+        abort(500, description="Failed to calculate priority. Please try again.")
+    data['priority'] = priority
     sessions.append(data)
     save_sessions(sessions)
     return jsonify({"message": "Session added successfully!", "session": data}), 201
@@ -106,6 +109,11 @@ def bad_request(error):
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({"error": str(error)}), 404
+
+# Error handler for 500 Internal Server Error
+@app.errorhandler(500)
+def internal_error(error):
+    return jsonify({"error": str(error)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

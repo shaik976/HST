@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Determine the priority class based on the priority score
     function getPriorityClass(priorityScore) {
+        if (priorityScore === null || priorityScore === undefined) return 'low'; // Default to low priority if null/undefined
         if (priorityScore > 0.7) return 'high';
         if (priorityScore > 0.4) return 'medium';
         return 'low';
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <span>⏰ ${task.timeFrom} - ${task.timeTo}</span>
                 </div>
                 <div class="task-meta">
-                    <span>Priority Score: ${task.priority.toFixed(2)}</span>
+                    <span>Priority Score: ${task.priority !== null ? task.priority.toFixed(2) : 'N/A'}</span>
                 </div>
             `;
 
