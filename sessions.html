@@ -8,13 +8,26 @@
     <script src="sessions.js" defer></script>
 </head>
 <body>
+    <!-- Navigation Panel -->
+    <div class="navigation-panel">
+        <div class="nav-logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="fe.html">Home</a></li>
+            <li><a href="tt.html">Timetable</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+        </ul>
+    </div>
+
+    <!-- Rest of the sessions.html content -->
     <div class="container">
         <h1>Scheduled Sessions</h1>
-        <ul id="sessions-list"></ul>
-        <div class="button-group">
-            <button class="back-btn" onclick="window.location.href='fe.html'">Back</button>
-            <button class="todo-btn" onclick="window.location.href='todo.html'">View Todo List</button>
+        <div class="priority-key">
+            <span class="high">High Priority</span>
+            <span class="medium">Medium Priority</span>
+            <span class="low">Low Priority</span>
         </div>
+        <ul id="sessions-list"></ul>
     </div>
 </body>
 </html>

@@ -1,4 +1,3 @@
-// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
     const saveButton = document.getElementById("saveButton");
     const inputs = document.querySelectorAll("input[type='text']");
@@ -6,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load saved timetable data from local storage
     function loadTimetable() {
         inputs.forEach((input) => {
-            const key = input.parentElement.parentElement.rowIndex + "-" + input.parentElement.cellIndex;
+            const key = `row-${input.parentElement.parentElement.rowIndex}-col-${input.parentElement.cellIndex}`;
             const savedValue = localStorage.getItem(key);
             if (savedValue) {
                 input.value = savedValue;
@@ -17,11 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Save timetable data to local storage and send to backend
     async function saveTimetable() {
         const timetableData = [];
+        console.log("Starting to save timetable...");
+
         inputs.forEach((input) => {
-            const key = input.parentElement.parentElement.rowIndex + "-" + input.parentElement.cellIndex;
+            const key = `row-${input.parentElement.parentElement.rowIndex}-col-${input.parentElement.cellIndex}`;
             const value = input.value.trim();
+            console.log(`Processing input: Key = ${key}, Value = ${value}`);
+
             if (value) {
                 localStorage.setItem(key, value);
+                console.log(`Saved to localStorage: Key = ${key}, Value = ${value}`);
 
                 // Extract day, time, and subject
                 const day = input.parentElement.parentElement.cells[0].textContent;
@@ -29,16 +33,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 const subject = value;
 
                 timetableData.push({ day, time, subject });
+                console.log(`Added to timetableData: Day = ${day}, Time = ${time}, Subject = ${subject}`);
             }
         });
 
+        console.log("Timetable data to send:", timetableData);
+
         // Send timetable data to the backend
         try {
+            console.log("Sending data to backend...");
             const response = await fetch('http://127.0.0.1:5000/add-timetable', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ timetable: timetableData }),
             });
+
+            console.log("Backend response:", response);
 
             if (!response.ok) throw new Error('Failed to save timetable to backend');
             alert("Timetable saved successfully and sessions added!");

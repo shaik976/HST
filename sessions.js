@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
+    // Determine the priority class based on the priority score
+    function getPriorityClass(priorityScore) {
+        if (priorityScore === null || priorityScore === undefined) return 'low'; // Default to low priority if null/undefined
+        if (priorityScore > 0.7) return 'high';
+        if (priorityScore > 0.4) return 'medium';
+        return 'low';
+    }
+
     // Render sessions in the list
     async function renderSessions() {
         sessionsList.innerHTML = ""; // Clear existing sessions
@@ -45,7 +53,21 @@ document.addEventListener('DOMContentLoaded', async function () {
         } else {
             sessions.forEach((session) => {
                 const li = document.createElement('li');
-                li.textContent = `${session.subject} - ${session.date} | ${session.timeFrom} to ${session.timeTo}`;
+                li.className = `task-item ${getPriorityClass(session.priority)}`;
+
+                li.innerHTML = `
+                    <div class="task-header">
+                        <span class="subject">${session.subject}</span>
+                        <span class="priority">${getPriorityClass(session.priority).toUpperCase()}</span>
+                    </div>
+                    <div class="task-details">
+                        <span>📅 ${session.date}</span>
+                        <span>⏰ ${session.timeFrom} - ${session.timeTo}</span>
+                    </div>
+                    <div class="task-meta">
+                        <span>Priority Score: ${session.priority !== null ? session.priority.toFixed(2) : 'N/A'}</span>
+                    </div>
+                `;
 
                 // Add the session ID as a data attribute
                 li.setAttribute('data-session-id', session.id);
