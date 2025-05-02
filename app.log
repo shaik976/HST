@@ -518,3 +518,222 @@
 2025-05-02 10:43:33,738 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:33] "OPTIONS /add-timetable HTTP/1.1" 200 -
 2025-05-02 10:43:33,750 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:33] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
 2025-05-02 10:43:36,227 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:36] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-02 11:00:14,749 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:00:14,749 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:00:14,752 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:00:15,216 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:00:15,220 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:00:15,241 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:00:15] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:00:22,233 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:00:22] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:00:27,197 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:00:27] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:00:31,740 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:00:31] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:00:33,425 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:00:33] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:21,418 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:02:21,418 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:02:21,420 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:02:21,794 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:02:21,797 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:02:33,850 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:33] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:37,020 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:37] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:41,205 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:41] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:44,832 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:44] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:44,846 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:44] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-02 11:02:50,395 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:50] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-02 11:02:50,410 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:50] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-02 11:02:56,336 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:56] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:02:59,629 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:02:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:03:19,191 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:03:19] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:03:39,014 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:03:39] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:09:42,208 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:09:42,209 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:09:42,211 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:09:42,575 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:09:42,578 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:09:47,519 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:09:47] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:09:49,331 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:09:49] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:09:52,966 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:09:52] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:10:49,324 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:10:49] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:10:52,411 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:10:52] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:10:53,093 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:10:53] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:11:02,300 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:11:02] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:11:05,137 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:11:05] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:27:15,792 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:27:15,793 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:27:15,794 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:27:16,109 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:27:16,113 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:27:19,618 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:27:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:27:23,729 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:27:23] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:27:34,769 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:27:34] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,543 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,567 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,582 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,742 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,753 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,766 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,863 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,882 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:04,889 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,378 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,390 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,395 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,942 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,942 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:05,964 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:28:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:28:26,495 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:28:26,495 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:28:26,497 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:28:26,819 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:28:26,822 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:29:02,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:29:02,883 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:29:02,884 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:29:03,165 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:29:03,168 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:29:18,312 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:29:18] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:29:21,675 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:29:21] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:29:23,105 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:29:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:29:43,395 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:29:43] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:31:52,940 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:31:52,940 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:31:52,942 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:31:53,221 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:31:53,224 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:32:06,927 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:32:06] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:35:50,197 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:35:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:35:57,599 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:35:57] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:08,646 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:08] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:09,113 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:09] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:16,709 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:16] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:54,432 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:54] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:55,067 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:36:55,926 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:36:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:37:23,690 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:37:23] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:37:25,244 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:37:25] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:37:39,511 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:37:39] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:37:40,755 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:37:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:42:54,638 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:42:54,638 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:42:54,640 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:42:54,922 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:42:54,925 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:43:06,598 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:06] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:43:09,041 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:09] "[31m[1mPOST /prioritize-tasks HTTP/1.1[0m" 405 -
+2025-05-02 11:43:11,383 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:43:12,607 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:12] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:43:15,944 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:15] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:43:46,508 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:46] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 11:43:46,522 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:46] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 11:43:49,593 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:43:49] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:44:02,365 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:02] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:44:05,886 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:05] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 11:44:05,892 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:05] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 11:44:05,915 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:05] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:44:11,703 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:44:12,308 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:12] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:44:13,290 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:13] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:44:14,026 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:14] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:44:30,674 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:44:30] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:46:19,297 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:46:19,297 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:46:19,299 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:46:19,625 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:46:19,629 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:46:29,312 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:46:29] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:46:30,921 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:46:30] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:46:32,561 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:46:32] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:51:02,431 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:51:02,432 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:51:02,434 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:51:02,790 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:51:02,793 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:51:09,821 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:09] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:51:47,030 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:47] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:51:47,834 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:51:48,540 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:48] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:51:49,461 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:49] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:51:50,181 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:50] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:51:51,348 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:51] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:51:58,580 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:51:58] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:52:15,108 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:52:15] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:52:32,149 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:52:32] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:53:04,969 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:53:04] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 11:53:04,976 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:53:04] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 11:53:07,728 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:53:07] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:56:47,272 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 11:56:47,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 11:56:47,274 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 11:56:47,569 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 11:56:47,572 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 11:56:58,406 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:56:58] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:56:59,793 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:56:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:57:11,524 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:57:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:57:14,414 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:57:14] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 11:59:00,423 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:59:00] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 11:59:38,912 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 11:59:38] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:01:24,236 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:01:24] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:02:04,053 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:02:04] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 12:04:01,315 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:04:01] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 12:04:50,376 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:04:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:19:26,578 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:19:26] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:20:09,030 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:20:09] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:25:01,540 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:01] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 12:25:01,548 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:01] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 12:25:08,248 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 12:25:19,206 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:25:38,458 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 12:25:54,671 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:25:54] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 12:26:50,594 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151e93a4sm570265ad.58 - gsmtp')
+2025-05-02 12:26:50,595 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151e93a4sm570265ad.58 - gsmtp')
+2025-05-02 12:26:50,595 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a34780a07sm5436548a91.25 - gsmtp')
+2025-05-02 12:26:50,596 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a34780a07sm5436548a91.25 - gsmtp')
+2025-05-02 12:26:52,412 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:26:52] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 12:26:52,419 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:26:52] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 12:26:55,191 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 12:26:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 12:27:57,030 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e1522a3d0sm409525ad.199 - gsmtp')
+2025-05-02 12:27:57,031 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e1522a3d0sm409525ad.199 - gsmtp')
+2025-05-02 12:27:57,133 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7a30esm854573b3a.13 - gsmtp')
+2025-05-02 12:27:57,134 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7a30esm854573b3a.13 - gsmtp')
+2025-05-02 12:29:00,180 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b1fb392493bsm64932a12.13 - gsmtp')
+2025-05-02 12:29:00,181 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b1fb392493bsm64932a12.13 - gsmtp')
+2025-05-02 12:29:02,004 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a3471ee73sm4886676a91.3 - gsmtp')
+2025-05-02 12:29:02,005 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a3471ee73sm4886676a91.3 - gsmtp')
+2025-05-02 12:29:03,062 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e15228fa7sm430795ad.181 - gsmtp')
+2025-05-02 12:29:03,063 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e15228fa7sm430795ad.181 - gsmtp')
+2025-05-02 12:29:05,372 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e14f742aasm809625ad.0 - gsmtp')
+2025-05-02 12:29:05,373 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e14f742aasm809625ad.0 - gsmtp')
+2025-05-02 12:30:05,282 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151e9dc9sm620415ad.87 - gsmtp')
+2025-05-02 12:30:05,283 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151e9dc9sm620415ad.87 - gsmtp')
+2025-05-02 12:30:07,882 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e150eb5d2sm640915ad.7 - gsmtp')
+2025-05-02 12:30:07,883 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e150eb5d2sm640915ad.7 - gsmtp')
+2025-05-02 12:30:08,149 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7405909cd89sm816265b3a.169 - gsmtp')
+2025-05-02 12:30:08,150 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7405909cd89sm816265b3a.169 - gsmtp')
+2025-05-02 12:30:11,308 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e152326f7sm429745ad.227 - gsmtp')
+2025-05-02 12:30:11,308 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e152326f7sm429745ad.227 - gsmtp')
+2025-05-02 12:31:11,540 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7aebdsm836070b3a.32 - gsmtp')
+2025-05-02 12:31:11,540 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7aebdsm836070b3a.32 - gsmtp')
+2025-05-02 12:31:15,429 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7a3bdsm834966b3a.9 - gsmtp')
+2025-05-02 12:31:15,430 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058d7a3bdsm834966b3a.9 - gsmtp')
+2025-05-02 12:31:15,647 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058db9200sm830202b3a.42 - gsmtp')
+2025-05-02 12:31:15,648 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-74058db9200sm830202b3a.42 - gsmtp')
+2025-05-02 12:31:18,491 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a476421aasm2126152a91.49 - gsmtp')
+2025-05-02 12:31:18,492 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a476421aasm2126152a91.49 - gsmtp')
+2025-05-02 12:32:17,840 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151ebd08sm648195ad.104 - gsmtp')
+2025-05-02 12:32:17,841 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-22e151ebd08sm648195ad.104 - gsmtp')
+2025-05-02 12:32:22,576 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4748e852sm2146173a91.23 - gsmtp')
+2025-05-02 12:32:22,577 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4748e852sm2146173a91.23 - gsmtp')
+2025-05-02 12:32:22,815 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a47476120sm2163670a91.13 - gsmtp')
+2025-05-02 12:32:22,815 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a47476120sm2163670a91.13 - gsmtp')
+2025-05-02 12:32:26,331 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4762672bsm2136055a91.32 - gsmtp')
+2025-05-02 12:32:26,331 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4762672bsm2136055a91.32 - gsmtp')

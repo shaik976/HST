@@ -105,13 +105,10 @@ def add_timetable():
 @rate_limit()
 def get_sessions():
     try:
-        sessions = safe_file_operation('read', 'sessions.json')
-        model = PriorityModel()
-        prioritized_sessions = model.prioritize_sessions(sessions)
-        return jsonify(prioritized_sessions)
+        return safe_file_operation('read', 'sessions.json')
     except Exception as e:
-        logger.error(f"Error getting sessions: {str(e)}")
-        return jsonify({'error': 'Failed to retrieve sessions'}), 500
+        logger.error(f"Error reading sessions: {str(e)}")
+        return []
 
 @app.route('/add-session', methods=['POST'])
 @handle_errors
@@ -146,14 +143,21 @@ def add_session():
         except ValueError:
             return jsonify({'error': 'Invalid duration'}), 400
 
-        sessions = safe_file_operation('read', 'sessions.json')
+        sessions = get_sessions()
         sessions.append(data)
-        safe_file_operation('write', 'sessions.json', sessions)
+        save_sessions(sessions)
         
         return jsonify({'message': 'Session added successfully'}), 201
     except Exception as e:
         logger.error(f"Error adding session: {str(e)}")
         return jsonify({'error': 'Failed to add session'}), 500
+
+def save_sessions(sessions):
+    try:
+        safe_file_operation('write', 'sessions.json', sessions)
+    except Exception as e:
+        logger.error(f"Error saving sessions: {str(e)}")
+        raise
 
 @app.route('/delete-session', methods=['POST'])
 @handle_errors
@@ -164,12 +168,13 @@ def delete_session():
         if not data or 'index' not in data:
             return jsonify({'error': 'No index provided'}), 400
 
-        sessions = safe_file_operation('read', 'sessions.json')
+        sessions = get_sessions()
         index = int(data['index'])
         
         if 0 <= index < len(sessions):
+            session_stats['deleted'] += 1
             sessions.pop(index)
-            safe_file_operation('write', 'sessions.json', sessions)
+            save_sessions(sessions)
             return jsonify({'message': 'Session deleted successfully'})
         else:
             return jsonify({'error': 'Invalid index'}), 400
@@ -182,9 +187,39 @@ def delete_session():
 @rate_limit()
 def prioritize_tasks():
     try:
-        sessions = safe_file_operation('read', 'sessions.json')
+        sessions = get_sessions()
+        if not sessions:
+            return jsonify([])
+
         model = PriorityModel()
         prioritized_sessions = model.prioritize_sessions(sessions)
+        
+        # Calculate priority based on various factors
+        for session in prioritized_sessions:
+            # Convert date string to datetime object
+            session_date = datetime.strptime(session['date'], '%Y-%m-%d').date()
+            current_date = datetime.now().date()
+            days_until_session = (session_date - current_date).days
+
+            # Priority calculation based on days until session and duration
+            if days_until_session <= 1:  # Due within 1 day
+                session['priority'] = 'high'
+            elif days_until_session <= 3:  # Due within 3 days
+                session['priority'] = 'medium'
+            else:  # Due later
+                session['priority'] = 'low'
+
+            # Adjust priority based on duration
+            duration = int(session['duration'])
+            if duration > 120:  # Long sessions (> 2 hours)
+                if session['priority'] != 'high':
+                    session['priority'] = 'high'
+            elif duration > 60:  # Medium sessions (1-2 hours)
+                if session['priority'] == 'low':
+                    session['priority'] = 'medium'
+
+        # Save the prioritized sessions
+        save_sessions(prioritized_sessions)
         return jsonify(prioritized_sessions)
     except Exception as e:
         logger.error(f"Error prioritizing tasks: {str(e)}")
@@ -203,7 +238,7 @@ def send_reminder():
         if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
             return jsonify({'error': 'Invalid email format'}), 400
 
-        sessions = safe_file_operation('read', 'sessions.json')
+        sessions = get_sessions()
         email_utils.send_reminder(email, sessions)
         return jsonify({'message': 'Reminder sent successfully'})
     except Exception as e:
@@ -224,7 +259,7 @@ def get_timetable():
 def check_upcoming_sessions():
     try:
         # Read sessions from file
-        sessions = safe_file_operation('read', 'sessions.json')
+        sessions = get_sessions()
         current_time = datetime.now()
         
         for session in sessions:
@@ -250,7 +285,7 @@ def check_upcoming_sessions():
                         
                         # Mark session as notified
                         session['notification_sent'] = True
-                        safe_file_operation('write', 'sessions.json', sessions)
+                        save_sessions(sessions)
                         
                         logger.info(f"Sent notification for session: {session['subject']}")
                     except Exception as e:
@@ -268,6 +303,74 @@ schedule.every(1).minutes.do(check_upcoming_sessions)
 scheduler_thread = threading.Thread(target=run_scheduler)
 scheduler_thread.daemon = True
 scheduler_thread.start()
+
+# Session statistics
+session_stats = {
+    'completed': 0,
+    'deleted': 0,
+    'ignored': 0
+}
+
+@app.route('/mark-session-done', methods=['POST'])
+@handle_errors
+@rate_limit()
+def mark_session_done():
+    try:
+        data = request.get_json()
+        index = data.get('index')
+        
+        sessions = get_sessions()
+        if 0 <= index < len(sessions):
+            session = sessions.pop(index)
+            session_stats['completed'] += 1
+            
+            # Update priority counts
+            priority = session.get('priority', 'low')
+            if priority in ['high', 'medium', 'low']:
+                session_stats[f'{priority}_completed'] = session_stats.get(f'{priority}_completed', 0) + 1
+            
+            save_sessions(sessions)
+            return jsonify({'success': True})
+        return jsonify({'success': False, 'error': 'Invalid session index'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/get-dashboard-stats')
+@handle_errors
+@rate_limit()
+def get_dashboard_stats():
+    try:
+        sessions = get_sessions()
+        current_date = datetime.now().date()
+        
+        # Initialize priority stats
+        stats = {
+            'completed': session_stats['completed'],
+            'deleted': session_stats['deleted'],
+            'ignored': 0,
+            'priority_distribution': {
+                'high': 0,
+                'medium': 0,
+                'low': 0
+            }
+        }
+        
+        # Calculate ignored sessions and priority distribution
+        for session in sessions:
+            session_date = datetime.strptime(session['date'], '%Y-%m-%d').date()
+            if session_date < current_date:
+                stats['ignored'] += 1
+            
+            priority = session.get('priority', 'low')
+            if priority in ['high', 'medium', 'low']:
+                stats['priority_distribution'][priority] += 1
+        
+        session_stats['ignored'] = stats['ignored']
+        
+        return jsonify(stats)
+    except Exception as e:
+        logger.error(f"Error getting dashboard stats: {str(e)}")
+        return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run(debug=True)

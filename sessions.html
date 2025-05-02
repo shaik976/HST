@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scheduled Sessions</title>
+    <title>Sessions</title>
     <link rel="stylesheet" href="style.css">
-    <script src="sessions.js" defer></script>
 </head>
 <body>
     <!-- Navigation Panel -->
@@ -15,30 +14,41 @@
         <ul class="nav-links">
             <li><a href="fe.html">Home</a></li>
             <li><a href="tt.html">Timetable</a></li>
-            <li><a href="sessions.html">Sessions</a></li>
+            <li><a href="sessions.html" class="active">Sessions</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
     </div>
 
-    <!-- Main Content -->
     <div class="container">
-        <h1>Scheduled Sessions</h1>
-        
-        <!-- Priority Key -->
-        <div class="priority-key">
-            <span class="high">High Priority</span>
-            <span class="medium">Medium Priority</span>
-            <span class="low">Low Priority</span>
-        </div>
+        <div class="sessions-container">
+            <h1>Your Sessions</h1>
+            
+            <!-- Priority Legend -->
+            <div class="priority-legend">
+                <div class="legend-item">
+                    <span class="priority-dot high"></span>
+                    <span>High Priority</span>
+                </div>
+                <div class="legend-item">
+                    <span class="priority-dot medium"></span>
+                    <span>Medium Priority</span>
+                </div>
+                <div class="legend-item">
+                    <span class="priority-dot low"></span>
+                    <span>Low Priority</span>
+                </div>
+            </div>
 
-        <!-- Session Controls -->
-        <div class="sessions-controls">
-            <button onclick="loadSessions()" class="refresh-btn">
-                <span class="refresh-icon">↻</span> Refresh
-            </button>
+            <div class="sessions-controls">
+                <button id="refreshBtn" class="refresh-btn">Refresh</button>
+                <button id="prioritizeBtn" class="prioritize-btn">Prioritize</button>
+            </div>
+            <div id="sessions-list">
+                <!-- Sessions will be dynamically added here -->
+            </div>
         </div>
-
-        <!-- Sessions List -->
-        <div id="sessions-list" class="sessions-list"></div>
     </div>
+
+    <script src="sessions.js"></script>
 </body>
 </html>

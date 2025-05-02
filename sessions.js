@@ -112,15 +112,43 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             
-            // Sort sessions by date and time
-            const sortedSessions = sessions.sort((a, b) => {
-                const dateA = new Date(`${a.date}T${a.startTime}`);
-                const dateB = new Date(`${b.date}T${b.startTime}`);
-                return dateA - dateB;
-            });
-            
-            sortedSessions.forEach((session, index) => {
-                sessionsList.appendChild(createSessionElement(session, index));
+            // Calculate priority percentages
+            const totalSessions = sessions.length;
+            const priorityCounts = {
+                high: sessions.filter(s => s.priority === 'high').length,
+                medium: sessions.filter(s => s.priority === 'medium').length,
+                low: sessions.filter(s => s.priority === 'low').length
+            };
+
+            sessions.forEach((session, index) => {
+                const sessionElement = document.createElement('div');
+                sessionElement.className = `session-item ${session.priority || 'low'}-priority`;
+
+                const priorityPercentage = Math.round((priorityCounts[session.priority || 'low'] / totalSessions) * 100);
+
+                sessionElement.innerHTML = `
+                    <div class="session-header">
+                        <span class="session-title">${session.subject}</span>
+                        <span class="priority-badge ${session.priority || 'low'}">${(session.priority || 'low').toUpperCase()}</span>
+                    </div>
+                    <div class="session-details">
+                        <p>Date: ${session.date}</p>
+                        <p>Time: ${session.startTime}</p>
+                        <p>Duration: ${session.duration} minutes</p>
+                        <p>Description: ${session.description}</p>
+                        <div class="priority-bar">
+                            <div class="priority-progress ${session.priority || 'low'}" 
+                                 style="width: ${priorityPercentage}%"></div>
+                        </div>
+                        <p class="priority-percentage">${priorityPercentage}% of total sessions</p>
+                    </div>
+                    <div class="session-actions">
+                        <button onclick="markAsDone(${index})" class="done-btn">Done</button>
+                        <button onclick="deleteSession(${index})" class="delete-btn">Delete</button>
+                    </div>
+                `;
+
+                sessionsList.appendChild(sessionElement);
             });
         } catch (error) {
             console.error('Error:', error);
@@ -160,6 +188,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Function to prioritize sessions
+    async function prioritizeSessions() {
+        showSpinner();
+        try {
+            const response = await fetch('http://127.0.0.1:5000/prioritize-tasks', {
+                method: 'POST'
+            });
+            
+            if (!response.ok) {
+                throw new Error('Failed to prioritize sessions');
+            }
+            
+            // Reload sessions after successful prioritization
+            await loadSessions();
+        } catch (error) {
+            console.error('Error:', error);
+            showError('Failed to prioritize sessions. Please try again.');
+        } finally {
+            hideSpinner();
+        }
+    }
+
+    // Function to mark a session as done
+    async function markAsDone(index) {
+        showSpinner();
+        try {
+            const response = await fetch('http://127.0.0.1:5000/mark-session-done', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ index })
+            });
+            
+            if (!response.ok) {
+                throw new Error('Failed to mark session as done');
+            }
+            
+            // Reload sessions after successful marking
+            await loadSessions();
+        } catch (error) {
+            console.error('Error:', error);
+            showError('Failed to mark session as done');
+        } finally {
+            hideSpinner();
+        }
+    }
+
     // Initial load of sessions
     loadSessions();
+
+    // Add event listeners for refresh and prioritize buttons
+    document.getElementById('refreshBtn').addEventListener('click', loadSessions);
+    document.getElementById('prioritizeBtn').addEventListener('click', prioritizeSessions);
 });

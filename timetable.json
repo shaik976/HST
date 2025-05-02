@@ -2,6 +2,211 @@
     {
         "day": "Monday",
         "time": "9:20 - 10:10",
-        "subject": "hst"
+        "subject": "DWDM"
+    },
+    {
+        "day": "Monday",
+        "time": "10:10 - 11:00",
+        "subject": "EAI"
+    },
+    {
+        "day": "Monday",
+        "time": "11:00 - 11:50",
+        "subject": "MH"
+    },
+    {
+        "day": "Monday",
+        "time": "11:50 - 12:40",
+        "subject": "ACD"
+    },
+    {
+        "day": "Monday",
+        "time": "1:30 - 2:20",
+        "subject": "PT"
+    },
+    {
+        "day": "Monday",
+        "time": "2:20 - 3:10",
+        "subject": "PT"
+    },
+    {
+        "day": "Monday",
+        "time": "3:10 - 3:50",
+        "subject": "PT"
+    },
+    {
+        "day": "Tuesday",
+        "time": "9:20 - 10:10",
+        "subject": "ACD"
+    },
+    {
+        "day": "Tuesday",
+        "time": "10:10 - 11:00",
+        "subject": "DWDM"
+    },
+    {
+        "day": "Tuesday",
+        "time": "11:00 - 11:50",
+        "subject": "OE"
+    },
+    {
+        "day": "Tuesday",
+        "time": "11:50 - 12:40",
+        "subject": "OE"
+    },
+    {
+        "day": "Tuesday",
+        "time": "1:30 - 2:20",
+        "subject": "GS"
+    },
+    {
+        "day": "Tuesday",
+        "time": "2:20 - 3:10",
+        "subject": "EAI"
+    },
+    {
+        "day": "Tuesday",
+        "time": "3:10 - 3:50",
+        "subject": "FSD"
+    },
+    {
+        "day": "Wednesday",
+        "time": "9:20 - 10:10",
+        "subject": "FSD"
+    },
+    {
+        "day": "Wednesday",
+        "time": "10:10 - 11:00",
+        "subject": "DWDM"
+    },
+    {
+        "day": "Wednesday",
+        "time": "11:00 - 11:50",
+        "subject": "OE"
+    },
+    {
+        "day": "Wednesday",
+        "time": "11:50 - 12:40",
+        "subject": "OE"
+    },
+    {
+        "day": "Wednesday",
+        "time": "1:30 - 2:20",
+        "subject": "DMCT Lab"
+    },
+    {
+        "day": "Wednesday",
+        "time": "2:20 - 3:10",
+        "subject": "DMCT Lab"
+    },
+    {
+        "day": "Wednesday",
+        "time": "3:10 - 3:50",
+        "subject": "DMCT Lab"
+    },
+    {
+        "day": "Thursday",
+        "time": "9:20 - 10:10",
+        "subject": "EAI"
+    },
+    {
+        "day": "Thursday",
+        "time": "10:10 - 11:00",
+        "subject": "FSD Lab"
+    },
+    {
+        "day": "Thursday",
+        "time": "11:00 - 11:50",
+        "subject": "FSD Lab"
+    },
+    {
+        "day": "Thursday",
+        "time": "11:50 - 12:40",
+        "subject": "FSD Lab"
+    },
+    {
+        "day": "Thursday",
+        "time": "1:30 - 2:20",
+        "subject": "ACD"
+    },
+    {
+        "day": "Thursday",
+        "time": "2:20 - 3:10",
+        "subject": "FSD"
+    },
+    {
+        "day": "Thursday",
+        "time": "3:10 - 3:50",
+        "subject": "EAI"
+    },
+    {
+        "day": "Friday",
+        "time": "9:20 - 10:10",
+        "subject": "PA"
+    },
+    {
+        "day": "Friday",
+        "time": "10:10 - 11:00",
+        "subject": "PA"
+    },
+    {
+        "day": "Friday",
+        "time": "11:00 - 11:50",
+        "subject": "ACD"
+    },
+    {
+        "day": "Friday",
+        "time": "11:50 - 12:40",
+        "subject": "DWDM"
+    },
+    {
+        "day": "Friday",
+        "time": "1:30 - 2:20",
+        "subject": "EAI"
+    },
+    {
+        "day": "Friday",
+        "time": "2:20 - 3:10",
+        "subject": "FSD"
+    },
+    {
+        "day": "Friday",
+        "time": "3:10 - 3:50",
+        "subject": "GS"
+    },
+    {
+        "day": "Saturday",
+        "time": "9:20 - 10:10",
+        "subject": "FSD"
+    },
+    {
+        "day": "Saturday",
+        "time": "10:10 - 11:00",
+        "subject": "EAI"
+    },
+    {
+        "day": "Saturday",
+        "time": "11:00 - 11:50",
+        "subject": "ACD"
+    },
+    {
+        "day": "Saturday",
+        "time": "11:50 - 12:40",
+        "subject": "ACD"
+    },
+    {
+        "day": "Saturday",
+        "time": "1:30 - 2:20",
+        "subject": "MP"
+    },
+    {
+        "day": "Saturday",
+        "time": "2:20 - 3:10",
+        "subject": "MP"
+    },
+    {
+        "day": "Saturday",
+        "time": "3:10 - 3:50",
+        "subject": "DWDM"
     }
 ]

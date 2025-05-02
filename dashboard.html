@@ -3,25 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Today's Classes</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-tabs">
-            <a href="fe.html">Home</a>
-            <a href="sessions.html">Sessions</a>
-            <a href="tt.html">Timetable</a>
-            <a href="dashboard.html" class="active">Dashboard</a>
-        </nav>
+    <!-- Navigation Panel -->
+    <div class="navigation-panel">
+        <div class="nav-logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="fe.html">Home</a></li>
+            <li><a href="tt.html">Timetable</a></li>
+            <li><a href="sessions.html">Sessions</a></li>
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        </ul>
+    </div>
 
+    <!-- Main Content -->
+    <div class="container">
         <div class="dashboard-container">
-            <h1>Today's Classes</h1>
-            <div class="date-display">
-                <span id="current-date"></span>
+            <h1>Dashboard</h1>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h2>Tasks Completed</h2>
+                    <div class="stat-value" id="completed-tasks">0</div>
+                    <div class="stat-percentage" id="completed-percentage">0%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h2>Tasks Deleted</h2>
+                    <div class="stat-value" id="deleted-tasks">0</div>
+                    <div class="stat-percentage" id="deleted-percentage">0%</div>
+                </div>
+                
+                <div class="stat-card">
+                    <h2>Tasks Ignored</h2>
+                    <div class="stat-value" id="ignored-tasks">0</div>
+                    <div class="stat-percentage" id="ignored-percentage">0%</div>
+                </div>
             </div>
-            <div class="classes-container" id="today-classes">
-                <!-- Classes will be dynamically added here -->
+
+            <div class="chart-container">
+                <canvas id="taskDistributionChart"></canvas>
+            </div>
+
+            <div class="score-container">
+                <h2>Your Score</h2>
+                <div class="score-value" id="user-score">0</div>
+                <div class="score-description" id="score-description">Keep going!</div>
             </div>
         </div>
     </div>

@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to validate form data
     function validateFormData(data) {
         const currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0); // Reset time to start of day
+        
         const selectedDate = new Date(data.date);
+        selectedDate.setHours(0, 0, 0, 0); // Reset time to start of day
         
         // Validate date is not in the past
         if (selectedDate < currentDate) {
