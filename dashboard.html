@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Today's Classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-tabs">
+            <a href="fe.html">Home</a>
+            <a href="sessions.html">Sessions</a>
+            <a href="tt.html">Timetable</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
+        </nav>
+
+        <div class="dashboard-container">
+            <h1>Today's Classes</h1>
+            <div class="date-display">
+                <span id="current-date"></span>
+            </div>
+            <div class="classes-container" id="today-classes">
+                <!-- Classes will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 

@@ -1,165 +1,273 @@
-from flask import Flask, jsonify, request, abort
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from datetime import datetime, timedelta
-import os
 import json
-import uuid
-from priority_model import TaskPrioritizer  # Import the prioritizer
+import os
+from datetime import datetime, timedelta
+import re
+from priority_model import PriorityModel
+import email_utils
+import logging
+from functools import wraps
+import time
+import threading
+import schedule
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('app.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app)
 
-# File to store sessions data
-SESSIONS_FILE = 'sessions.json'
+# Rate limiting decorator
+def rate_limit(max_requests=100, time_window=60):
+    def decorator(f):
+        requests = []
+        @wraps(f)
+        def wrapper(*args, **kwargs):
+            now = time.time()
+            requests[:] = [req for req in requests if now - req < time_window]
+            if len(requests) >= max_requests:
+                return jsonify({'error': 'Rate limit exceeded'}), 429
+            requests.append(now)
+            return f(*args, **kwargs)
+        return wrapper
+    return decorator
 
-# Initialize the TaskPrioritizer
-prioritizer = TaskPrioritizer()
+# Input sanitization
+def sanitize_input(data):
+    if isinstance(data, str):
+        # Remove potentially harmful characters
+        return re.sub(r'[<>]', '', data)
+    elif isinstance(data, dict):
+        return {k: sanitize_input(v) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [sanitize_input(item) for item in data]
+    return data
 
-# Load sessions from file or initialize an empty list
-def load_sessions():
-    if os.path.exists(SESSIONS_FILE):
-        with open(SESSIONS_FILE, 'r') as file:
-            return json.load(file)
-    return []
+# Error handling decorator
+def handle_errors(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        try:
+            return f(*args, **kwargs)
+        except Exception as e:
+            logger.error(f"Error in {f.__name__}: {str(e)}")
+            return jsonify({'error': 'An internal error occurred'}), 500
+    return wrapper
 
-# Save sessions to file
-def save_sessions(sessions):
-    with open(SESSIONS_FILE, 'w') as file:
-        json.dump(sessions, file, indent=4)
-
-# Helper function to validate session data
-def validate_session_data(data):
-    required_fields = ['subject', 'date', 'timeFrom', 'timeTo']
-    if not data or not all(key in data for key in required_fields):
-        return False
+# File operations with proper error handling
+def safe_file_operation(operation, filename, *args, **kwargs):
     try:
-        # Validate date and time format
-        datetime.strptime(data['date'], '%Y-%m-%d')
-        datetime.strptime(data['timeFrom'], '%H:%M')
-        datetime.strptime(data['timeTo'], '%H:%M')
-        return True
-    except ValueError:
-        return False
+        if operation == 'read':
+            with open(filename, 'r') as f:
+                return json.load(f)
+        elif operation == 'write':
+            with open(filename, 'w') as f:
+                json.dump(args[0], f, indent=4)
+    except Exception as e:
+        logger.error(f"File operation error on {filename}: {str(e)}")
+        raise
 
-# Root route
 @app.route('/')
-def home():
-    return jsonify({"message": "Welcome to the Smart Study Scheduler API!"})
+def serve_frontend():
+    return send_from_directory('.', 'fe.html')
 
-# Add a new session
-@app.route('/add-session', methods=['POST'])
-def add_session():
-    data = request.json
-    if not validate_session_data(data):
-        abort(400, description="Invalid data. Ensure 'subject', 'date', 'timeFrom', and 'timeTo' are provided in the correct format.")
-    
-    sessions = load_sessions()
-    
-    # Check for overlapping sessions
-    for session in sessions:
-        if session['date'] == data['date']:
-            if (data['timeFrom'] < session['timeTo'] and data['timeTo'] > session['timeFrom']):
-                abort(400, description="Session overlaps with an existing session.")
-    
-    # Add a unique ID and calculate priority
-    data['id'] = str(uuid.uuid4())
-    priority = prioritizer.calculate_priority(data)
-    if priority is None:
-        abort(500, description="Failed to calculate priority. Please try again.")
-    data['priority'] = priority
-    sessions.append(data)
-    save_sessions(sessions)
-    return jsonify({"message": "Session added successfully!", "session": data}), 201
-
-# Get all sessions
-@app.route('/get-sessions', methods=['GET'])
-def get_sessions():
-    sessions = load_sessions()
-    return jsonify({"sessions": sessions})
-
-# Delete a session by ID
-@app.route('/delete-session/<string:session_id>', methods=['DELETE'])
-def delete_session(session_id):
-    sessions = load_sessions()
-    session_to_delete = next((session for session in sessions if session.get('id') == session_id), None)
-    
-    if not session_to_delete:
-        abort(404, description="Session not found.")
-    
-    sessions.remove(session_to_delete)
-    save_sessions(sessions)
-    return jsonify({
-        "message": "Session deleted successfully!",
-        "deleted_session": session_to_delete
-    })
-
-# Add timetable data as sessions
 @app.route('/add-timetable', methods=['POST'])
+@handle_errors
+@rate_limit()
 def add_timetable():
-    data = request.json
-    if not data or 'timetable' not in data:
-        abort(400, description="Invalid data. Timetable data is required.")
+    try:
+        data = request.get_json()
+        if not data or 'timetable' not in data:
+            return jsonify({'error': 'No timetable data provided'}), 400
 
-    sessions = load_sessions()
-    timetable = data['timetable']
+        # Sanitize input
+        timetable_data = sanitize_input(data['timetable'])
 
-    for entry in timetable:
-        # Extract day, time, and subject
-        day = entry['day']
-        time_range = entry['time']
-        subject = entry['subject']
+        # Save timetable data
+        safe_file_operation('write', 'timetable.json', timetable_data)
+        
+        return jsonify({'message': 'Timetable saved successfully'}), 201
+    except Exception as e:
+        logger.error(f"Error saving timetable: {str(e)}")
+        return jsonify({'error': 'Failed to save timetable'}), 500
 
-        # Convert day and time into a valid date and time format
-        # For simplicity, assume the timetable is for the current week
-        today = datetime.now()
-        days_in_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-        day_index = days_in_week.index(day)
-        session_date = (today + timedelta(days=(day_index - today.weekday()))).strftime('%Y-%m-%d')
+@app.route('/get-sessions')
+@handle_errors
+@rate_limit()
+def get_sessions():
+    try:
+        sessions = safe_file_operation('read', 'sessions.json')
+        model = PriorityModel()
+        prioritized_sessions = model.prioritize_sessions(sessions)
+        return jsonify(prioritized_sessions)
+    except Exception as e:
+        logger.error(f"Error getting sessions: {str(e)}")
+        return jsonify({'error': 'Failed to retrieve sessions'}), 500
 
-        # Split time range into start and end times
-        time_from, time_to = time_range.split(' - ')
+@app.route('/add-session', methods=['POST'])
+@handle_errors
+@rate_limit()
+def add_session():
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
 
-        # Create session data
-        session_data = {
-            'subject': subject,
-            'date': session_date,
-            'timeFrom': time_from,
-            'timeTo': time_to,
-        }
+        # Validate required fields
+        required_fields = ['subject', 'date', 'startTime', 'duration', 'description']
+        if not all(field in data for field in required_fields):
+            return jsonify({'error': 'Missing required fields'}), 400
 
-        # Validate and add the session
-        if validate_session_data(session_data):
-            session_data['id'] = str(uuid.uuid4())
-            priority = prioritizer.calculate_priority(session_data)
-            if priority is not None:
-                session_data['priority'] = priority
-                sessions.append(session_data)
+        # Sanitize input
+        data = sanitize_input(data)
 
-    # Save the updated sessions
-    save_sessions(sessions)
-    return jsonify({"message": "Timetable saved and sessions added successfully!"}), 201
+        # Validate date and time format
+        try:
+            datetime.strptime(data['date'], '%Y-%m-%d')
+            datetime.strptime(data['startTime'], '%H:%M')
+        except ValueError as e:
+            logger.error(f"Date/time validation error: {str(e)}")
+            return jsonify({'error': 'Invalid date or time format. Use YYYY-MM-DD for date and HH:MM for time'}), 400
 
-# Get prioritized tasks
-@app.route('/prioritize-tasks', methods=['GET'])
+        # Validate duration
+        try:
+            duration = int(data['duration'])
+            if duration <= 0:
+                return jsonify({'error': 'Duration must be positive'}), 400
+        except ValueError:
+            return jsonify({'error': 'Invalid duration'}), 400
+
+        sessions = safe_file_operation('read', 'sessions.json')
+        sessions.append(data)
+        safe_file_operation('write', 'sessions.json', sessions)
+        
+        return jsonify({'message': 'Session added successfully'}), 201
+    except Exception as e:
+        logger.error(f"Error adding session: {str(e)}")
+        return jsonify({'error': 'Failed to add session'}), 500
+
+@app.route('/delete-session', methods=['POST'])
+@handle_errors
+@rate_limit()
+def delete_session():
+    try:
+        data = request.get_json()
+        if not data or 'index' not in data:
+            return jsonify({'error': 'No index provided'}), 400
+
+        sessions = safe_file_operation('read', 'sessions.json')
+        index = int(data['index'])
+        
+        if 0 <= index < len(sessions):
+            sessions.pop(index)
+            safe_file_operation('write', 'sessions.json', sessions)
+            return jsonify({'message': 'Session deleted successfully'})
+        else:
+            return jsonify({'error': 'Invalid index'}), 400
+    except Exception as e:
+        logger.error(f"Error deleting session: {str(e)}")
+        return jsonify({'error': 'Failed to delete session'}), 500
+
+@app.route('/prioritize-tasks')
+@handle_errors
+@rate_limit()
 def prioritize_tasks():
-    sessions = load_sessions()
-    prioritized = prioritizer.prioritize_tasks(sessions)
-    return jsonify({"prioritized_tasks": prioritized})
+    try:
+        sessions = safe_file_operation('read', 'sessions.json')
+        model = PriorityModel()
+        prioritized_sessions = model.prioritize_sessions(sessions)
+        return jsonify(prioritized_sessions)
+    except Exception as e:
+        logger.error(f"Error prioritizing tasks: {str(e)}")
+        return jsonify({'error': 'Failed to prioritize tasks'}), 500
 
-# Error handler for 400 Bad Request
-@app.errorhandler(400)
-def bad_request(error):
-    return jsonify({"error": str(error)}), 400
+@app.route('/send-reminder', methods=['POST'])
+@handle_errors
+@rate_limit()
+def send_reminder():
+    try:
+        data = request.get_json()
+        if not data or 'email' not in data:
+            return jsonify({'error': 'No email provided'}), 400
 
-# Error handler for 404 Not Found
-@app.errorhandler(404)
-def not_found(error):
-    return jsonify({"error": str(error)}), 404
+        email = sanitize_input(data['email'])
+        if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+            return jsonify({'error': 'Invalid email format'}), 400
 
-# Error handler for 500 Internal Server Error
-@app.errorhandler(500)
-def internal_error(error):
-    return jsonify({"error": str(error)}), 500
+        sessions = safe_file_operation('read', 'sessions.json')
+        email_utils.send_reminder(email, sessions)
+        return jsonify({'message': 'Reminder sent successfully'})
+    except Exception as e:
+        logger.error(f"Error sending reminder: {str(e)}")
+        return jsonify({'error': 'Failed to send reminder'}), 500
+
+@app.route('/get-timetable')
+@handle_errors
+@rate_limit()
+def get_timetable():
+    try:
+        timetable = safe_file_operation('read', 'timetable.json')
+        return jsonify(timetable)
+    except Exception as e:
+        logger.error(f"Error getting timetable: {str(e)}")
+        return jsonify({'error': 'Failed to retrieve timetable'}), 500
+
+def check_upcoming_sessions():
+    try:
+        # Read sessions from file
+        sessions = safe_file_operation('read', 'sessions.json')
+        current_time = datetime.now()
+        
+        for session in sessions:
+            # Parse session date and time
+            session_date = datetime.strptime(session['date'], '%Y-%m-%d')
+            session_time = datetime.strptime(session['startTime'], '%H:%M').time()
+            session_datetime = datetime.combine(session_date, session_time)
+            
+            # Calculate time difference
+            time_diff = session_datetime - current_time
+            
+            # If session is within the next hour and hasn't been notified yet
+            if timedelta(hours=0) < time_diff <= timedelta(hours=1):
+                # Check if notification was already sent
+                if not session.get('notification_sent', False):
+                    try:
+                        # Send email notification
+                        email_sender = email_utils.EmailSender()
+                        email_sender.send_reminder(
+                            'shaiksiddiq830@gmail.com',  # Set recipient email
+                            [session]
+                        )
+                        
+                        # Mark session as notified
+                        session['notification_sent'] = True
+                        safe_file_operation('write', 'sessions.json', sessions)
+                        
+                        logger.info(f"Sent notification for session: {session['subject']}")
+                    except Exception as e:
+                        logger.error(f"Failed to send notification for session {session['subject']}: {str(e)}")
+    except Exception as e:
+        logger.error(f"Error checking upcoming sessions: {str(e)}")
+
+def run_scheduler():
+    while True:
+        schedule.run_pending()
+        time.sleep(60)  # Check every minute
+
+# Start the scheduler in a background thread
+schedule.every(1).minutes.do(check_upcoming_sessions)
+scheduler_thread = threading.Thread(target=run_scheduler)
+scheduler_thread.daemon = True
+scheduler_thread.start()
 
 if __name__ == '__main__':
     app.run(debug=True)

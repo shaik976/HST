@@ -1,88 +1,78 @@
 from datetime import datetime
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import pickle
+import logging
+import os
 
-class TaskPrioritizer:
+class PriorityModel:
     def __init__(self):
-        # Define weights for subjects (modify as needed)
-        self.subject_weights = {
-            'math': 1.5,      # Higher weight for math
-            'science': 1.3,   # Medium weight for science
-            'history': 1.1,   # Lower weight for history
-            'default': 1.0    # Default weight for other subjects
+        self.model_file = 'priority_model.pkl'
+        self.priority_ranges = {
+            'high': 2,      # 0-2 days
+            'medium': 7,    # 2-7 days
+            'low': float('inf')  # >7 days
         }
 
-        # Initialize a simple linear regression model for AI-based prioritization
-        self.model = LinearRegression()
+    def _validate_session(self, session):
+        required_fields = ['date', 'startTime', 'duration']
+        if not all(field in session for field in required_fields):
+            raise ValueError("Missing required fields in session")
 
-        # Train the model with example data (replace with real data)
-        self.train_model()
+        try:
+            # Validate date
+            datetime.strptime(session['date'], '%Y-%m-%d')
+            
+            # Validate time
+            datetime.strptime(session['startTime'], '%H:%M')
+            
+            # Validate duration
+            duration = int(session['duration'])
+            if duration <= 0:
+                raise ValueError("Duration must be positive")
+        except ValueError as e:
+            raise ValueError(f"Invalid session data: {str(e)}")
 
-    def train_model(self):
-        """
-        Train the AI model using example data.
-        Replace this with real historical data for better results.
-        """
-        # Example training data
-        X_train = np.array([
-            [5, 2, 1.5],  # Days until due: 5, Duration: 2 hours, Subject weight: 1.5 (Math)
-            [10, 1, 1.3], # Days until due: 10, Duration: 1 hour, Subject weight: 1.3 (Science)
-            [3, 3, 1.1],  # Days until due: 3, Duration: 3 hours, Subject weight: 1.1 (History)
-        ])
-        y_train = np.array([0.9, 0.7, 0.6])  # User-defined priority scores
-
-        # Train the model
-        self.model.fit(X_train, y_train)
-
-        # Save the model to a file (optional)
-        with open('priority_model.pkl', 'wb') as model_file:
-            pickle.dump(self.model, model_file)
+    def _calculate_days_until(self, date_str):
+        try:
+            session_date = datetime.strptime(date_str, '%Y-%m-%d')
+            today = datetime.now()
+            days_until = (session_date - today).days
+            return max(0, days_until)  # Ensure non-negative
+        except ValueError:
+            raise ValueError("Invalid date format")
 
     def calculate_priority(self, session):
-        """
-        Calculate the priority score for a session using AI.
-        Priority is based on:
-        1. Days until the session date (urgency)
-        2. Duration of the session (shorter sessions are prioritized)
-        3. Subject weight (importance of the subject)
-        """
         try:
-            # Calculate days until the session date
-            due_date = datetime.strptime(session['date'], '%Y-%m-%d')
-            days_until_due = (due_date - datetime.now()).days
+            self._validate_session(session)
+            days_until = self._calculate_days_until(session['date'])
             
-            # Calculate duration in hours
-            time_from = datetime.strptime(session['timeFrom'], '%H:%M')
-            time_to = datetime.strptime(session['timeTo'], '%H:%M')
-            duration = (time_to - time_from).seconds / 3600  # Convert seconds to hours
+            # Calculate priority: 100% for today, decreasing by 10% each day
+            # Ensure priority stays between 0.1 and 1.0
+            priority = max(0.1, 1.0 - (days_until * 0.1))
             
-            # Get subject weight (default to 1.0 if subject not found)
-            subject = session['subject'].lower()
-            subject_weight = self.subject_weights.get(subject, self.subject_weights['default'])
-            
-            # Prepare features for the AI model
-            features = np.array([[days_until_due, duration, subject_weight]])
-            
-            # Predict priority using the AI model
-            priority_score = self.model.predict(features)[0]
-            
-            return priority_score
+            return priority
+                
         except Exception as e:
-            print(f"Error calculating priority: {e}")
-            return None
+            logging.error(f"Error calculating priority: {str(e)}")
+            return 0.5  # Default priority in case of error
 
-    def prioritize_tasks(self, sessions):
-        """
-        Prioritize a list of sessions based on their AI-calculated priority scores.
-        """
+    def prioritize_sessions(self, sessions):
         try:
-            # Calculate priority for each session
+            if not isinstance(sessions, list):
+                raise ValueError("Sessions must be a list")
+
+            # Calculate priorities for all sessions
             for session in sessions:
                 session['priority'] = self.calculate_priority(session)
-            
+
             # Sort sessions by priority (highest first)
             return sorted(sessions, key=lambda x: x['priority'], reverse=True)
         except Exception as e:
-            print(f"Error prioritizing tasks: {e}")
-            return sessions
+            logging.error(f"Error prioritizing sessions: {str(e)}")
+            return sessions  # Return unsorted sessions in case of error
+
+    def get_priority_text(self, priority):
+        if priority >= 0.9:
+            return "High"
+        elif priority >= 0.4:
+            return "Medium"
+        else:
+            return "Low"

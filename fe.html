@@ -10,7 +10,7 @@
     <!-- Navigation Panel -->
     <div class="navigation-panel">
         <div class="nav-logo">
-        </div>
+        </div>  
         <ul class="nav-links">
             <li><a href="fe.html">Home</a></li>
             <li><a href="tt.html">Timetable</a></li>
@@ -18,29 +18,63 @@
         </ul>
     </div>
 
-    <!-- Rest of the fe.html content -->
+    <!-- Main Content -->
     <div class="container">
         <h1>Smart Study Scheduler</h1>
-        <div class="scheduler">
-            <h2>Schedule Your Study Session</h2>
-            <form id="schedule-form">
+        
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="message error" style="display: none;"></div>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="message success" style="display: none;"></div>
+
+        <!-- Session Form -->
+        <form id="sessionForm" class="session-form">
+            <h2>Add Study Session</h2>
+            <div class="form-group">
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" placeholder="Enter subject" required>
-                
+                <input type="text" id="subject" required placeholder="Enter subject name">
+            </div>
+            
+            <div class="form-group">
                 <label for="date">Date:</label>
                 <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" min="1" required placeholder="Enter duration in minutes">
+            </div>
+            
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" required placeholder="Enter session description"></textarea>
+            </div>
+            
+            <button type="button" onclick="addSession()" class="add-session-btn">Add Session</button>
+        </form>
 
-                <label for="timeFrom">Time From:</label>
-                <input type="time" id="timeFrom" required>
-
-                <label for="timeTo">Time To:</label>
-                <input type="time" id="timeTo" required>
-
-                <button type="submit">Add Session</button>
-            </form>
+        <!-- Email Reminder Form -->
+        <div class="reminder-form">
+            <h2>Email Reminder</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Enter your email">
+            </div>
+            <button type="button" onclick="sendReminder()" class="reminder-btn">Send Reminder</button>
         </div>
     </div>
-    <div id="loading-spinner" class="loading-spinner"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

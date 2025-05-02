@@ -19,15 +19,26 @@
         </ul>
     </div>
 
-    <!-- Rest of the sessions.html content -->
+    <!-- Main Content -->
     <div class="container">
         <h1>Scheduled Sessions</h1>
+        
+        <!-- Priority Key -->
         <div class="priority-key">
             <span class="high">High Priority</span>
             <span class="medium">Medium Priority</span>
             <span class="low">Low Priority</span>
         </div>
-        <ul id="sessions-list"></ul>
+
+        <!-- Session Controls -->
+        <div class="sessions-controls">
+            <button onclick="loadSessions()" class="refresh-btn">
+                <span class="refresh-icon">↻</span> Refresh
+            </button>
+        </div>
+
+        <!-- Sessions List -->
+        <div id="sessions-list" class="sessions-list"></div>
     </div>
 </body>
 </html>

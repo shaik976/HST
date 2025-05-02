@@ -22,88 +22,104 @@
     <!-- Main Content -->
     <div class="container">
         <h1>College Timetable</h1> <!-- Added heading from the second code -->
-        <table id="timetable">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>9:20 - 10:10</th>
-                    <th>10:10 - 11:00</th>
-                    <th>11:00 - 11:50</th>
-                    <th>11:50 - 12:40</th>
-                    <th>1:30 - 2:20</th>
-                    <th>2:20 - 3:10</th>
-                    <th>3:10 - 3:50</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Monday -->
-                <tr>
-                    <td>Monday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-                <!-- Tuesday -->
-                <tr>
-                    <td>Tuesday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-                <!-- Wednesday -->
-                <tr>
-                    <td>Wednesday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-                <!-- Thursday -->
-                <tr>
-                    <td>Thursday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-                <!-- Friday -->
-                <tr>
-                    <td>Friday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-                <!-- Saturday -->
-                <tr>
-                    <td>Saturday</td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                    <td><input type="text" placeholder="Subject"></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <!-- Current Period Display -->
+        <div class="container mt-4">
+            <div id="currentPeriodDisplay">
+                <div id="currentTime"></div>
+                <div id="currentPeriod"></div>
+            </div>
+        </div>
+
+        <div class="timetable-controls">
+            <button id="editModeBtn">Edit Mode</button>
+            <button id="saveTimetableBtn" style="display: none;">Save Changes</button>
+        </div>
+
+        <div class="timetable-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>9:20 - 10:10</th>
+                        <th>10:10 - 11:00</th>
+                        <th>11:00 - 11:50</th>
+                        <th>11:50 - 12:40</th>
+                        <th>1:30 - 2:20</th>
+                        <th>2:20 - 3:10</th>
+                        <th>3:10 - 3:50</th>
+                    </tr>
+                </thead>
+                <tbody id="timetableBody">
+                    <!-- Monday -->
+                    <tr>
+                        <td>Monday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                    <!-- Tuesday -->
+                    <tr>
+                        <td>Tuesday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                    <!-- Wednesday -->
+                    <tr>
+                        <td>Wednesday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                    <!-- Thursday -->
+                    <tr>
+                        <td>Thursday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                    <!-- Friday -->
+                    <tr>
+                        <td>Friday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                    <!-- Saturday -->
+                    <tr>
+                        <td>Saturday</td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                        <td><input type="text" placeholder="Subject"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Button Group -->
         <div class="button-group">

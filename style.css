@@ -1,190 +1,268 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset and base styles */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align to the top */
-    min-height: 100vh;
-}
-
-.container {
-    margin-top: 80px; /* Adjust based on the height of the navigation panel */
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
     box-sizing: border-box;
 }
 
-h1, h2 {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
     color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    padding-top: 70px; /* Add padding to body to account for fixed nav */
 }
 
-/* Navigation Panel Styles */
+/* Navigation Panel */
 .navigation-panel {
+    background-color: #2c3e50;
+    padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #2c3e50;
-    color: #fff;
-    display: flex;
-    justify-content: center; /* Center the links horizontally */
-    align-items: center; /* Center the links vertically */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Fixed height for nav */
 }
 
 .nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
     margin: 0;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-links li:hover {
-    background-color: #34495e;
+    padding: 0;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #ecf0f1;
     text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00c92b;
+    background-color: #34495e;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 /* Form Styles */
+.scheduler {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 500px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 label {
-    margin-top: 10px;
-    font-weight: bold;
-    width: 100%;
-    text-align: left;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
 }
 
-input {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[type="text"],
+input[type="date"],
+input[type="time"] {
     width: 100%;
-    box-sizing: border-box;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    border-color: #3498db;
+    outline: none;
 }
 
 button {
-    margin-top: 15px;
-    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 5px;
-    background: #01024e;
-    color: #fff;
-    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
-    max-width: 200px;
-    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background: #00c92b;
+    background-color: #2980b9;
 }
 
-/* Sessions List Styles */
+/* Sessions List */
 #sessions-list {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
 }
 
-#sessions-list li {
-    background: #f8f9fa;
-    margin: 10px 0;
-    padding: 15px;
+.session-item {
+    background-color: white;
+    padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    border-left: 4px solid #ddd;
+}
+
+.session-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.session-item.high {
+    border-left-color: #e74c3c;
+}
+
+.session-item.medium {
+    border-left-color: #f39c12;
+}
+
+.session-item.low {
+    border-left-color: #2ecc71;
+}
+
+.session-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.session-header h3 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.priority-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.priority-badge.high {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.priority-badge.medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.priority-badge.low {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.session-details {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.session-details p {
+    margin: 0.5rem 0;
+}
+
+.session-details strong {
+    color: #2c3e50;
 }
 
 .delete-btn {
-    background-color: #ff4444;
+    background-color: #e74c3c;
     color: white;
+    padding: 0.5rem 1rem;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
 .delete-btn:hover {
-    background-color: #cc0000;
+    background-color: #c0392b;
+    transform: translateY(-1px);
 }
 
-/* Priority Key Styles */
+/* Priority Classes */
+.high {
+    border-left: 4px solid #e74c3c;
+}
+
+.medium {
+    border-left: 4px solid #f39c12;
+}
+
+.low {
+    border-left: 4px solid #2ecc71;
+}
+
+/* Priority Key */
 .priority-key {
-    margin: 15px 0;
     display: flex;
-    gap: 15px;
     justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .priority-key span {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
-.high { background-color: #ff6b6b; color: white; }
-.medium { background-color: #ffd93d; color: black; }
-.low { background-color: #2ff04f; color: white; }
+.priority-key .high {
+    background-color: #e74c3c;
+    color: white;
+}
 
-/* Loading Spinner Styles */
+.priority-key .medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.priority-key .low {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Loading Spinner */
 .loading-spinner {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #01024e;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
     animation: spin 1s linear infinite;
-    display: none;
-    z-index: 1000;
 }
 
 @keyframes spin {
@@ -192,100 +270,902 @@ button:hover {
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Error and Success Message Styles */
-.error-message, .success-message {
+/* Messages */
+.error-message,
+.success-message {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
     z-index: 1000;
-    font-size: 14px;
+    animation: slideIn 0.3s ease-out;
 }
 
 .error-message {
-    background-color: #ff4444;
-    color: white;
+    background-color: #e74c3c;
 }
 
 .success-message {
-    background-color: #00c851;
-    color: white;
+    background-color: #2ecc71;
 }
 
-/* Timetable Container Styles */
-#timetable {
-    margin-top: 80px; /* Adjust based on the height of the navigation panel */
-    width: 100%;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #e74c3c;
+    margin-top: 1rem;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* No Sessions Message */
+.no-sessions {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container {
+        margin-top: 8rem;
+    }
+
+    .priority-key {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .session-item {
+        padding: 1rem;
+    }
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* Table Styles */
-table {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.session-form, .reminder-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input, textarea {
     width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
+    padding: 10px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-th {
-    background-color: #2c3e50;
-    color: #fff;
-    font-weight: bold;
+textarea {
+    min-height: 100px;
+    resize: vertical;
 }
 
-td {
-    background-color: #f9f9f9;
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Input Field Styles */
-input[type="text"] {
-    width: 90%;
-    padding: 8px;
-    border: 1px solid #ccc;
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Message Styles */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: none;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Sessions List */
+.sessions-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sessions-controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.sessions-list {
+    display: grid;
+    gap: 15px;
+}
+
+.session-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subject {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.priority {
+    padding: 5px 10px;
     border-radius: 4px;
     font-size: 14px;
-    text-align: center;
 }
 
-input[type="text"]:focus {
+.high-priority {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.medium-priority {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.low-priority {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.session-details {
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .session-form, .reminder-form, .sessions-container {
+        padding: 15px;
+    }
+
+    .sessions-controls {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Accessibility */
+button:focus, input:focus, textarea:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .session-form, .reminder-form, button {
+        display: none;
+    }
+
+    .sessions-container {
+        box-shadow: none;
+    }
+
+    .session-item {
+        page-break-inside: avoid;
+    }
+}
+
+/* Timetable Styles */
+#timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#timetable th,
+#timetable td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+#timetable th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+
+#timetable td:first-child {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+#timetable input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+#timetable input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
     outline: none;
-    border-color: #2c3e50;
-    box-shadow: 0 0 5px rgba(44, 62, 80, 0.5);
+}
+
+#timetable input[type="text"]:hover {
+    border-color: #3498db;
+}
+
+#timetable tr:hover td:not(:first-child) {
+    background-color: #f8f9fa;
 }
 
 /* Save Button Styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
 #saveButton {
-    margin-top: 20px;
+    background-color: #2ecc71;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#saveButton:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#saveButton:active {
+    transform: translateY(0);
+}
+
+/* Loading Indicator */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #timetable {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #timetable th,
+    #timetable td {
+        min-width: 120px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Session Control Buttons */
+.sessions-controls {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    justify-content: center;
+}
+
+.refresh-btn,
+.prioritize-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.prioritize-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.refresh-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.prioritize-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.refresh-icon,
+.priority-icon {
+    font-size: 1.2rem;
+}
+
+/* Login Page Styles */
+.login-container {
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.login-form label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.login-form input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.login-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1rem;
+    color: #7f8c8d;
+}
+
+.signup-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Session Form Styles */
+.session-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.session-form h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.session-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.session-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.session-form input,
+.session-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.session-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.session-form input:focus,
+.session-form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.add-session-btn,
+.reminder-btn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.add-session-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.reminder-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.add-session-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.reminder-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Timetable Styles */
+.subject-text {
+    display: block;
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    min-height: 20px;
+    text-align: center;
+}
+
+/* Button Styles */
+.save-button, .edit-button {
     padding: 10px 20px;
-    background-color: #2c3e50;
-    color: #fff;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 10px;
 }
 
-#saveButton:hover {
-    background-color: #34495e;
+.save-button {
+    background-color: #28a745;
+    color: white;
 }
 
-/* Button Group Styles */
-.button-group {
+.save-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Message Styles */
+.success-message, .error-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+.success-message {
+    background-color: #28a745;
+}
+
+.error-message {
+    background-color: #dc3545;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Timetable cell styles */
+#timetable td {
+    position: relative;
+    padding: 0;
+}
+
+#timetable input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#timetable input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.current-period-display {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.current-time {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.current-period {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.current-period.active-class {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+}
+
+.current-period.break-time {
+    background-color: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffe0b2;
+}
+
+.current-period.no-class {
+    background-color: #f5f5f5;
+    color: #757575;
+    border: 1px solid #e0e0e0;
+}
+
+.current-period.no-subject {
+    background-color: #fafafa;
+    color: #616161;
+    border: 1px solid #eeeeee;
+}
+
+/* Current Period Display Styles */
+#currentPeriodDisplay {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#currentTime {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#currentPeriod {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#currentPeriod.active {
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    color: #1565c0;
+}
+
+#currentPeriod.break {
+    background-color: #f5f5f5;
+    border: 2px solid #9e9e9e;
+    color: #616161;
+}
+
+#currentPeriod.no-class {
+    background-color: #fafafa;
+    border: 2px solid #e0e0e0;
+    color: #9e9e9e;
+}
+
+#currentTime {
+    text-align: center;
+    font-size: 1em;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+.dashboard-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date-display {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.classes-container {
     display: flex;
-    justify-content: center; /* Center the button horizontally */
-    margin-top: 20px; /* Add some space above the button */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.class-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.class-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.class-time {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 100px;
+    text-align: center;
+    border-right: 2px solid #eee;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.class-details {
+    flex: 1;
+}
+
+.class-details h3 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+}
+
+.class-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.no-classes, .error {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    color: #e74c3c;
 }

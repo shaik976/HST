@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Study Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="login-container">
+            <h1>Smart Study Scheduler</h1>
+            <h2>Welcome Back</h2>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" class="login-btn">Login</button>
+                
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your login logic here
+            window.location.href = 'fe.html';
+        });
+    </script>
+</body>
+</html> 

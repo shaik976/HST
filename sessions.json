@@ -1,10 +1,9 @@
 [
     {
         "subject": "fsd",
-        "date": "2025-03-10",
-        "timeFrom": "15:14",
-        "timeTo": "16:15",
-        "id": "8cc0eb49-11b4-4eb4-b3fc-6950eb0a5774",
-        "priority": 1.5187301587301583
+        "date": "2025-05-03",
+        "startTime": "06:00",
+        "duration": 60,
+        "description": "full stack devlopment"
     }
 ]

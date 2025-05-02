@@ -1,0 +1,520 @@
+2025-04-23 11:08:51,680 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 11:08:51,681 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 11:08:51,684 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 11:08:53,218 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 11:08:53,222 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 11:12:25,279 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:12:25] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:16:19,883 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 11:16:19,884 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 11:16:19,886 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 11:16:21,370 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 11:16:21,373 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 11:16:29,990 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:16:29] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:16:38,887 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:16:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:17:11,254 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:17:11] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-23 11:17:11,269 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:17:11] "POST /delete-session HTTP/1.1" 200 -
+2025-04-23 11:17:11,287 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:17:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:18:03,458 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:03] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-23 11:18:03,528 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:03] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-23 11:18:03,569 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:18:14,058 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:14] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:18:22,673 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:22] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:18:28,909 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:18:28] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:21:42,095 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 11:21:42,096 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 11:21:42,098 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 11:21:43,814 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 11:21:43,817 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 11:21:48,170 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:21:48] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:21:51,920 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:21:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:21:58,618 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:21:58] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:22:03,164 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:22:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:25:13,274 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 11:25:13,274 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 11:25:13,275 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 11:25:14,586 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 11:25:14,589 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 11:25:35,362 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:25:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:25:38,221 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:25:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:25:47,855 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:25:47] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:25:53,613 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:25:53] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 11:26:17,635 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:17] "OPTIONS /send-reminder HTTP/1.1" 200 -
+2025-04-23 11:26:17,683 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:17,683 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:17,685 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:17] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:20,857 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:20,858 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:20,861 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:20] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:21,653 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:21,653 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:21,656 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:21] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:35,239 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:35] "OPTIONS /send-reminder HTTP/1.1" 200 -
+2025-04-23 11:26:35,252 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:35,253 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:35,255 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:35] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:35,469 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:35,470 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:35,512 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:35] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:35,671 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:35,673 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:35,675 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:35] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:40,781 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:40] "OPTIONS /send-reminder HTTP/1.1" 200 -
+2025-04-23 11:26:40,793 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:40,794 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:40,797 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:40] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:42,345 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:42,346 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:42,348 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:42] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:43,199 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:43,200 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:43,202 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:43] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:26:43,886 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:26:43,887 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:26:43,890 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:26:43] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:33:46,381 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 11:33:46,382 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 11:33:46,384 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 11:33:48,304 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 11:33:48,307 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 11:34:07,435 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:34:07] "OPTIONS /send-reminder HTTP/1.1" 200 -
+2025-04-23 11:34:07,440 - root - ERROR - Failed to send reminder: Email credentials not properly configured
+2025-04-23 11:34:07,440 - __main__ - ERROR - Error sending reminder: Email credentials not properly configured
+2025-04-23 11:34:07,441 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:34:07] "[35m[1mPOST /send-reminder HTTP/1.1[0m" 500 -
+2025-04-23 11:34:09,041 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 11:34:09] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 12:04:33,699 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 12:04:33,699 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 12:04:33,702 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 12:04:34,975 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 12:04:34,991 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:10:54,825 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 14:10:54,826 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 14:10:54,829 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 14:10:56,261 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 14:10:56,268 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:11:03,530 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:11:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:11:08,054 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:11:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:11:14,039 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:11:14] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:11:38,317 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:11:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:12:03,749 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:12:03] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-23 14:12:03,811 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:12:03] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-23 14:12:03,852 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:12:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:12:06,074 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:12:06] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:13:45,656 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:13:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:13:45,813 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:13:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:13:46,206 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\app.py', reloading
+2025-04-23 14:13:46,490 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 14:13:48,954 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 14:13:48,957 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:14:04,274 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:14:04] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:14:04,276 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:14:04] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:14:05,046 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-23 14:14:05,239 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 14:14:07,187 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 14:14:07,192 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:15:03,000 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:15:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:16:26,047 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:16:26] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:16:26,333 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:16:26] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:16:26,928 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-23 14:16:27,132 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 14:16:29,079 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 14:16:29,084 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:20:45,635 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 14:20:45,636 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 14:20:45,637 - werkzeug - INFO -  * Restarting with stat
+2025-04-23 14:20:46,995 - werkzeug - WARNING -  * Debugger is active!
+2025-04-23 14:20:46,999 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-23 14:20:51,112 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:20:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:21:00,181 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:21:00] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:21:19,808 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:21:19] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:21:39,213 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:21:39] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:22:23,712 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:22:23] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-23 14:22:23,725 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:22:23] "POST /delete-session HTTP/1.1" 200 -
+2025-04-23 14:22:23,744 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:22:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:22:28,026 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:22:28] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-23 14:22:30,983 - werkzeug - INFO - 127.0.0.1 - - [23/Apr/2025 14:22:30] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:30:38,946 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:30:38,947 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:30:38,950 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 09:30:40,525 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 09:30:40,569 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 09:30:51,033 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:30:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:30:56,218 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:30:56] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:31:07,759 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:07] "GET /prioritize-tasks HTTP/1.1" 200 -
+2025-04-24 09:31:07,772 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:07] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:31:13,361 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:13] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:31:20,396 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:20] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-24 09:31:20,405 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:20] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 09:31:20,419 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:31:25,115 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:25] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:31:27,364 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:31:27] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:32:27,539 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:32:27] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 09:32:27,551 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:32:27] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 09:32:27,602 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:32:27] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:33:56,177 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:33:56] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 09:33:56,187 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:33:56] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 09:33:56,225 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:33:56] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:34:02,241 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:02] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:34:08,598 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:34:15,114 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:15] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-24 09:34:15,125 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:15] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 09:34:15,165 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:15] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:34:16,237 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:16] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 09:34:16,249 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:34:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:46:41,646 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:46:41,648 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:46:41,650 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 09:46:43,048 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 09:46:43,051 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 09:46:51,578 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:46:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:46:54,694 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:46:54] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:47:05,494 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:47:05] "[33mOPTIONS /add-timetable HTTP/1.1[0m" 404 -
+2025-04-24 09:47:09,385 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:47:09] "[33mOPTIONS /add-timetable HTTP/1.1[0m" 404 -
+2025-04-24 09:47:21,360 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:47:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:47:24,113 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:47:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:47:28,047 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:47:28] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:48:08,220 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:48:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:48:10,774 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:48:10] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:48:13,705 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:48:13] "GET /prioritize-tasks HTTP/1.1" 200 -
+2025-04-24 09:48:13,717 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:48:13] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:48:17,272 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:48:17] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:51:09,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:51:09,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:51:09,121 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 09:51:10,865 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 09:51:10,869 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 09:51:11,792 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:51:11] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 09:51:11,846 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:51:11] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 09:51:11,891 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:51:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:51:14,622 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:51:14] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:51:20,253 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:51:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:52:44,229 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:52:44] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:52:44,275 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:52:44] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:52:55,281 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:52:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:52:55,370 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:52:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:03,597 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:03,620 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:03] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:11,115 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:11,202 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:12,494 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:12] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:53:12,581 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:53:12] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:55:39,680 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:55:39,680 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:55:39,682 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 09:55:41,201 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 09:55:41,204 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 09:56:20,586 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:56:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:56:21,336 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:56:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:56:23,308 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:56:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:56:36,959 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:56:36] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:59:26,016 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 09:59:26,017 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 09:59:26,019 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 09:59:27,371 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 09:59:27,376 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 09:59:35,461 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:59:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 09:59:38,005 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 09:59:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:02:58,831 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:02:58] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 10:02:58,843 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:02:58] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 10:02:58,885 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:02:58] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:03:05,401 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:03:05] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:05:01,814 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:05:01] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:12:45,499 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 10:12:45,500 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 10:12:45,501 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:12:47,041 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:12:47,046 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:13:06,578 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:13:06] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:13:12,306 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:13:12] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:13:17,851 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:13:17] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:18:26,495 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 10:18:26,495 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 10:18:26,497 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:18:27,929 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:18:27,938 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:18:31,877 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:18:31] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:18:37,899 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:18:37] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:18:38,881 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:18:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:18:42,268 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:18:42] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:25:12,083 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:25:12] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:25:12,893 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:25:13,091 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:25:14,942 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:25:14,946 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:26:24,567 - root - ERROR - Error calculating priority: X has 2 features, but LinearRegression is expecting 3 features as input.
+2025-04-24 10:26:24,568 - root - ERROR - Error calculating priority: X has 2 features, but LinearRegression is expecting 3 features as input.
+2025-04-24 10:26:24,570 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:26:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:30:46,182 - root - ERROR - Error calculating priority: X has 2 features, but LinearRegression is expecting 3 features as input.
+2025-04-24 10:30:46,183 - root - ERROR - Error calculating priority: X has 2 features, but LinearRegression is expecting 3 features as input.
+2025-04-24 10:30:46,184 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:30:46] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:30:46,525 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:30:46,702 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:30:47,159 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:30:47,165 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:31:08,240 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:31:16,396 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:31:40,830 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:40] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 10:31:40,837 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:40] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 10:31:40,881 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:31:46,916 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:46] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:31:53,863 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:31:53] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:32:20,124 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:32:20] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 10:32:20,133 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:32:20] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 10:32:20,170 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:32:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:32:24,693 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:32:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:34:20,464 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:34:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:34:46,129 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:34:46] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:34:58,541 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:34:58] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:38:57,981 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:38:57] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:38:58,201 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:38:58,255 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:38:58,641 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:38:58,647 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:39:19,385 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:39:19] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:40:56,108 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:40:56] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:42:20,092 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:42:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:42:20,445 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:42:20,505 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:42:20,948 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:42:20,952 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:42:43,994 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:42:43] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:42:47,358 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:42:47] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:42:48,350 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:42:48] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:43:01,694 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 10:43:01,694 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 10:43:01,696 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:43:02,048 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:43:02,053 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:43:13,847 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:43:13] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:43:16,472 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:43:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:47:22,090 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:47:22,152 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:47:22,550 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:47:22,556 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:47:26,587 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\priority_model.py', reloading
+2025-04-24 10:47:26,653 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 10:47:27,015 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 10:47:27,019 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 10:47:34,195 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:47:34] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:48:41,723 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:48:41] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:49:01,643 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:49:01] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:49:02,903 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:49:02] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:49:06,270 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:49:06] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 10:50:08,378 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:50:08] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 10:50:08,383 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:50:08] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 10:50:10,839 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 10:50:10] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:00:26,785 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 11:00:26,786 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 11:00:26,788 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:00:27,155 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:00:27,159 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:00:33,530 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:00:33] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:01:22,001 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:01:22] "[33mOPTIONS /add-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:10:05,493 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 11:10:05,493 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 11:10:05,495 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:10:05,859 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:10:05,863 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:15:46,053 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:15:46] "[33mOPTIONS /add-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:15:56,294 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:15:56] "[33mOPTIONS /add-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:16:56,661 - werkzeug - INFO -  * Detected change in 'C:\\Users\\skcube\\Desktop\\Project\\Test\\app.py', reloading
+2025-04-24 11:16:56,744 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:16:57,235 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:16:57,241 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:21:26,626 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 11:21:26,626 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 11:21:26,628 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:21:27,009 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:21:27,013 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:21:46,746 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:21:46] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:21:46,758 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:21:46] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:21:59,941 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:21:59] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:21:59,953 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:21:59] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:23:06,095 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:06] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-04-24 11:23:06,118 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:06] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-04-24 11:23:10,330 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:10] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:23:21,737 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:21] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:21,750 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:21] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:21,793 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:23:26,336 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:26] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:26,374 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:26] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:23:30,188 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:30] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:30,201 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:30] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:30,219 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:30] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:23:35,541 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:35] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:35,553 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:35] "POST /delete-session HTTP/1.1" 200 -
+2025-04-24 11:23:35,569 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:23:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:24:02,495 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:24:02] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:24:02,508 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:24:02] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:25:58,472 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:25:58] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:25:58,486 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:25:58] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:26:08,490 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:26:08] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:32:56,351 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 11:32:56,352 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 11:32:56,353 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:32:56,626 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:32:56,631 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:33:00,686 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:00] "GET /get-sessions HTTP/1.1" 200 -
+2025-04-24 11:33:02,371 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:02] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:33:05,638 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:05] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:33:05,644 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:05] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:33:24,996 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:24] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:33:25,005 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:33:25] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:34:35,168 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:34:35] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:34:35,423 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:34:35] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:34:35,912 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:34:35] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:35:00,238 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:35:00] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:35:03,570 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:35:03] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:35:03,577 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:35:03] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:36:03,184 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-24 11:36:03,185 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-24 11:36:03,186 - werkzeug - INFO -  * Restarting with stat
+2025-04-24 11:36:03,515 - werkzeug - WARNING -  * Debugger is active!
+2025-04-24 11:36:03,518 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-04-24 11:36:05,793 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:36:05] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:36:09,993 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:36:09] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:36:09,999 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:36:09] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:37:16,113 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:37:16] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-04-24 11:40:29,402 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:40:29] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-04-24 11:40:29,410 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:40:29] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-04-24 11:42:43,531 - werkzeug - INFO - 127.0.0.1 - - [24/Apr/2025 11:42:43] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:03:28,919 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:03:28,921 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:03:28,923 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:03:29,296 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:03:29,339 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:03:39,725 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:03:39] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:03:46,128 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:03:46] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:03:57,250 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:03:57] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:04:25,420 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:04:25] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:04:33,923 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:04:33] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:04:51,409 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:04:51] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:11:42,468 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:11:42,468 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:11:42,472 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:11:42,949 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:11:42,952 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:11:59,975 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:11:59] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:12:03,803 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:03] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:12:17,304 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:17] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:12:20,387 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:20] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 10:12:20,402 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:20] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 10:12:20,484 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:12:23,035 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:23] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 10:12:23,046 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:12:24,523 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:12:24] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:15:52,471 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:15:52,471 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:15:52,473 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:15:52,837 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:15:52,841 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:15:57,247 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:15:57] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:16:06,586 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:16:06] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:16:55,374 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:16:55] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 10:16:55,402 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:16:55] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 10:17:06,679 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:17:06] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:19:07,489 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:19:07,489 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:19:07,491 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:19:07,878 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:19:07,881 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:19:12,567 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:19:12] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:19:15,578 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:19:15] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:21:03,082 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:21:03,083 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:21:03,085 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:21:03,443 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:21:03,446 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:21:06,131 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:21:06] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:21:10,929 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:21:10] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:23:19,404 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:19] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 10:23:19,412 - __main__ - INFO - Session datetime: 2025-05-03 06:00:00, Current datetime: 2025-05-02 10:23:19.412859
+2025-05-02 10:23:19,418 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:19] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 10:23:22,516 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:22] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:23:36,094 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:36] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 10:23:36,105 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:36] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 10:23:36,118 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:36] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:23:47,558 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:47] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 10:23:47,569 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:47] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 10:23:47,578 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:47] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:23:48,777 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:23:48] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:24:17,189 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:24:17] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 10:24:17,197 - __main__ - INFO - Session datetime: 2025-05-03 06:00:00, Current datetime: 2025-05-02 10:24:17.197199
+2025-05-02 10:24:17,203 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:24:17] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 10:24:19,605 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:24:19] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:24:36,124 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:24:36] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:27:36,777 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:27:36,778 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:27:36,779 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:27:37,167 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:27:37,171 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:27:40,898 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:27:40] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:27:43,993 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:27:43] "[33mGET /get-timetable HTTP/1.1[0m" 404 -
+2025-05-02 10:28:31,335 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:31] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 10:28:31,366 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:31] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 10:28:33,736 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:33] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:28:40,517 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:40] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 10:28:40,532 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:40] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 10:28:40,547 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:28:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:36:52,126 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:36:52,128 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:36:52,130 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:36:52,550 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:36:52,554 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:36:55,348 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:36:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:36:59,662 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:36:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:37:03,586 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:37:03] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:37:16,275 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:37:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:37:19,072 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:37:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:37:24,210 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:37:24] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:37:27,744 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:37:27] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:38:13,274 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:38:13] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:38:50,425 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:38:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:41:53,613 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 10:41:53,613 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 10:41:53,616 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 10:41:53,979 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 10:41:54,026 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 10:42:01,526 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:01] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:42:04,887 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:42:11,843 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:11] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:42:12,647 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:12] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:42:16,155 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 10:42:21,841 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:42:21] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:05,046 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:05,060 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:10,270 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:10] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:19,949 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:22,316 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:22] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:22,328 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:22] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-02 10:43:33,738 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:33] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-02 10:43:33,750 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:33] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-02 10:43:36,227 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 10:43:36] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
