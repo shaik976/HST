@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Display current date
-    const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('current-date').textContent = currentDate.toLocaleDateString('en-US', options);
+    // const currentDate = new Date();
+    // const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    // document.getElementById('current-date').textContent = currentDate.toLocaleDateString('en-US', options);
 
     // Get today's classes
-    fetch('/get-timetable')
+    fetch('http://127.0.0.1:5000/get-timetable')
         .then(response => response.json())
         .then(data => {
-            const todayClasses = getTodayClasses(data, currentDate);
+            const todayClasses = getTodayClasses(data, new Date());
             displayClasses(todayClasses);
         })
         .catch(error => {
@@ -56,7 +56,7 @@ function displayClasses(classes) {
 }
 
 function loadDashboardStats() {
-    fetch('/get-dashboard-stats')
+    fetch('http://127.0.0.1:5000/get-dashboard-stats')
         .then(response => response.json())
         .then(data => {
             updateStats(data);

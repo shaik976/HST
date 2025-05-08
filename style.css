@@ -130,7 +130,7 @@ button:hover {
     border-radius: 8px;
     margin-bottom: 1rem;
     position: relative;
-    border-left: 4px solid;
+    border-left: 6px solid;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -139,16 +139,16 @@ button:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.session-item.high-priority {
-    border-left-color: #e74c3c;
+.session-item.high {
+    border-left: 6px solid #e74c3c;
 }
 
-.session-item.medium-priority {
-    border-left-color: #f39c12;
+.session-item.medium {
+    border-left: 6px solid #f1c40f;
 }
 
-.session-item.low-priority {
-    border-left-color: #2ecc71;
+.session-item.low {
+    border-left: 6px solid #27ae60;
 }
 
 .session-header {
@@ -1303,4 +1303,12 @@ button:focus, input:focus, textarea:focus {
 
 .priority-dot.low {
     background-color: #2ecc71;
+}
+
+/* Add gap between Done and Delete buttons */
+.session-info button {
+    margin-right: 0.5rem;
+}
+.session-info button:last-child {
+    margin-right: 0;
 }

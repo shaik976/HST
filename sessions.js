@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const errorDiv = document.createElement('div');
         errorDiv.className = 'message error';
         errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
         document.querySelector('.container').appendChild(errorDiv);
         setTimeout(() => errorDiv.remove(), 3000);
     }
@@ -39,17 +40,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to determine priority class
-    function getPriorityClass(priority) {
-        if (priority >= 0.7) return 'high';
-        if (priority >= 0.4) return 'medium';
-        return 'low';
+    // Function to determine priority class and label based on days until session
+    function getPriorityInfo(sessionDate) {
+        const today = new Date();
+        const sessionDay = new Date(sessionDate);
+        // Zero out time for accurate day diff
+        today.setHours(0,0,0,0);
+        sessionDay.setHours(0,0,0,0);
+        const diffTime = sessionDay - today;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        if (diffDays <= 3) return { class: 'high', label: 'High Priority' };
+        if (diffDays <= 7) return { class: 'medium', label: 'Medium Priority' };
+        if (diffDays <= 10) return { class: 'low', label: 'Low Priority' };
+        return { class: 'low', label: 'Low Priority' };
     }
 
     // Function to create session element
     function createSessionElement(session, index) {
         const div = document.createElement('div');
-        div.className = `session-item ${getPriorityClass(session.priority)}`;
+        const priorityInfo = getPriorityInfo(session.date);
+        div.className = `session-item ${priorityInfo.class}`;
         
         const sessionInfo = document.createElement('div');
         sessionInfo.className = 'session-info';
@@ -73,12 +83,19 @@ document.addEventListener('DOMContentLoaded', function () {
         description.textContent = `Description: ${session.description}`;
         
         const priority = document.createElement('p');
-        priority.textContent = `Priority: ${(session.priority * 100).toFixed(0)}%`;
+        priority.textContent = `Priority: ${priorityInfo.label}`;
         
+        // Done button
+        const doneButton = document.createElement('button');
+        doneButton.className = 'done-button';
+        doneButton.textContent = 'Done';
+        doneButton.onclick = () => markAsDone(index);
+        
+        // Delete button
         const deleteButton = document.createElement('button');
         deleteButton.className = 'delete-button';
         deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', () => deleteSession(index));
+        deleteButton.onclick = () => deleteSession(index);
         
         sessionInfo.appendChild(subject);
         sessionInfo.appendChild(date);
@@ -86,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sessionInfo.appendChild(duration);
         sessionInfo.appendChild(description);
         sessionInfo.appendChild(priority);
+        sessionInfo.appendChild(doneButton);
         sessionInfo.appendChild(deleteButton);
         
         div.appendChild(sessionInfo);
@@ -112,42 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             
-            // Calculate priority percentages
-            const totalSessions = sessions.length;
-            const priorityCounts = {
-                high: sessions.filter(s => s.priority === 'high').length,
-                medium: sessions.filter(s => s.priority === 'medium').length,
-                low: sessions.filter(s => s.priority === 'low').length
-            };
-
             sessions.forEach((session, index) => {
-                const sessionElement = document.createElement('div');
-                sessionElement.className = `session-item ${session.priority || 'low'}-priority`;
-
-                const priorityPercentage = Math.round((priorityCounts[session.priority || 'low'] / totalSessions) * 100);
-
-                sessionElement.innerHTML = `
-                    <div class="session-header">
-                        <span class="session-title">${session.subject}</span>
-                        <span class="priority-badge ${session.priority || 'low'}">${(session.priority || 'low').toUpperCase()}</span>
-                    </div>
-                    <div class="session-details">
-                        <p>Date: ${session.date}</p>
-                        <p>Time: ${session.startTime}</p>
-                        <p>Duration: ${session.duration} minutes</p>
-                        <p>Description: ${session.description}</p>
-                        <div class="priority-bar">
-                            <div class="priority-progress ${session.priority || 'low'}" 
-                                 style="width: ${priorityPercentage}%"></div>
-                        </div>
-                        <p class="priority-percentage">${priorityPercentage}% of total sessions</p>
-                    </div>
-                    <div class="session-actions">
-                        <button onclick="markAsDone(${index})" class="done-btn">Done</button>
-                        <button onclick="deleteSession(${index})" class="delete-btn">Delete</button>
-                    </div>
-                `;
-
+                const sessionElement = createSessionElement(session, index);
                 sessionsList.appendChild(sessionElement);
             });
         } catch (error) {
@@ -212,6 +196,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to mark a session as done
     async function markAsDone(index) {
+        // Check if session is in the future
+        const response = await fetch('http://127.0.0.1:5000/get-sessions');
+        const sessions = await response.json();
+        const session = sessions[index];
+        const sessionDate = new Date(session.date);
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        sessionDate.setHours(0,0,0,0);
+        if (sessionDate > today) {
+            showError('The session is in the future and cannot be marked as done yet.');
+            return;
+        }
         showSpinner();
         try {
             const response = await fetch('http://127.0.0.1:5000/mark-session-done', {
@@ -221,11 +217,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 body: JSON.stringify({ index })
             });
-            
             if (!response.ok) {
                 throw new Error('Failed to mark session as done');
             }
-            
             // Reload sessions after successful marking
             await loadSessions();
         } catch (error) {

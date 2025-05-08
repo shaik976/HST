@@ -11,6 +11,8 @@ from functools import wraps
 import time
 import threading
 import schedule
+import hashlib
+import json as pyjson
 
 # Configure logging
 logging.basicConfig(
@@ -159,6 +161,46 @@ def save_sessions(sessions):
         logger.error(f"Error saving sessions: {str(e)}")
         raise
 
+STATS_FILE = 'session_stats.json'
+
+def get_session_hash(session):
+    # Use subject, date, startTime, duration, description for uniqueness
+    key = f"{session['subject']}|{session['date']}|{session['startTime']}|{session['duration']}|{session['description']}"
+    return hashlib.md5(key.encode()).hexdigest()
+
+def load_stats():
+    try:
+        with open(STATS_FILE, 'r') as f:
+            return pyjson.load(f)
+    except Exception:
+        return {'completed': [], 'deleted': []}
+
+def save_stats(stats):
+    with open(STATS_FILE, 'w') as f:
+        pyjson.dump(stats, f)
+
+@app.route('/mark-session-done', methods=['POST'])
+@handle_errors
+@rate_limit()
+def mark_session_done():
+    try:
+        data = request.get_json()
+        index = data.get('index')
+        sessions = get_sessions()
+        if 0 <= index < len(sessions):
+            session = sessions.pop(index)
+            # Save hash to completed
+            stats = load_stats()
+            session_hash = get_session_hash(session)
+            if session_hash not in stats['completed']:
+                stats['completed'].append(session_hash)
+            save_stats(stats)
+            save_sessions(sessions)
+            return jsonify({'success': True})
+        return jsonify({'success': False, 'error': 'Invalid session index'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
 @app.route('/delete-session', methods=['POST'])
 @handle_errors
 @rate_limit()
@@ -167,13 +209,19 @@ def delete_session():
         data = request.get_json()
         if not data or 'index' not in data:
             return jsonify({'error': 'No index provided'}), 400
-
         sessions = get_sessions()
         index = int(data['index'])
-        
         if 0 <= index < len(sessions):
-            session_stats['deleted'] += 1
-            sessions.pop(index)
+            session = sessions.pop(index)
+            # Save hash to deleted
+            stats = load_stats()
+            session_hash = get_session_hash(session)
+            if session_hash not in stats['deleted']:
+                stats['deleted'].append(session_hash)
+                logger.info(f"Session deleted and hash added: {session_hash}")
+            else:
+                logger.info(f"Session deleted but hash already present: {session_hash}")
+            save_stats(stats)
             save_sessions(sessions)
             return jsonify({'message': 'Session deleted successfully'})
         else:
@@ -311,30 +359,6 @@ session_stats = {
     'ignored': 0
 }
 
-@app.route('/mark-session-done', methods=['POST'])
-@handle_errors
-@rate_limit()
-def mark_session_done():
-    try:
-        data = request.get_json()
-        index = data.get('index')
-        
-        sessions = get_sessions()
-        if 0 <= index < len(sessions):
-            session = sessions.pop(index)
-            session_stats['completed'] += 1
-            
-            # Update priority counts
-            priority = session.get('priority', 'low')
-            if priority in ['high', 'medium', 'low']:
-                session_stats[f'{priority}_completed'] = session_stats.get(f'{priority}_completed', 0) + 1
-            
-            save_sessions(sessions)
-            return jsonify({'success': True})
-        return jsonify({'success': False, 'error': 'Invalid session index'})
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)})
-
 @app.route('/get-dashboard-stats')
 @handle_errors
 @rate_limit()
@@ -342,32 +366,20 @@ def get_dashboard_stats():
     try:
         sessions = get_sessions()
         current_date = datetime.now().date()
-        
-        # Initialize priority stats
-        stats = {
-            'completed': session_stats['completed'],
-            'deleted': session_stats['deleted'],
-            'ignored': 0,
-            'priority_distribution': {
-                'high': 0,
-                'medium': 0,
-                'low': 0
-            }
-        }
-        
-        # Calculate ignored sessions and priority distribution
+        stats = load_stats()
+        completed = set(stats.get('completed', []))
+        deleted = set(stats.get('deleted', []))
+        ignored = 0
         for session in sessions:
             session_date = datetime.strptime(session['date'], '%Y-%m-%d').date()
-            if session_date < current_date:
-                stats['ignored'] += 1
-            
-            priority = session.get('priority', 'low')
-            if priority in ['high', 'medium', 'low']:
-                stats['priority_distribution'][priority] += 1
-        
-        session_stats['ignored'] = stats['ignored']
-        
-        return jsonify(stats)
+            session_hash = get_session_hash(session)
+            if session_date < current_date and session_hash not in completed and session_hash not in deleted:
+                ignored += 1
+        return jsonify({
+            'completed': len(completed),
+            'deleted': len(deleted),
+            'ignored': ignored
+        })
     except Exception as e:
         logger.error(f"Error getting dashboard stats: {str(e)}")
         return jsonify({'error': str(e)})

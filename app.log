@@ -737,3 +737,506 @@
 2025-05-02 12:32:22,815 - __main__ - ERROR - Failed to send notification for session aaa: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a47476120sm2163670a91.13 - gsmtp')
 2025-05-02 12:32:26,331 - root - ERROR - SMTP error while sending email: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4762672bsm2136055a91.32 - gsmtp')
 2025-05-02 12:32:26,331 - __main__ - ERROR - Failed to send notification for session azzz: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-30a4762672bsm2136055a91.32 - gsmtp')
+2025-05-02 16:09:17,072 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:09:17,073 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:09:17,075 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:09:17,461 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:09:17,469 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:09:23,206 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:09:23] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:09:30,183 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:09:30] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:09:57,882 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:09:57,921 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:09:57,924 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:09:58,294 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:09:58,298 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:10:06,284 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:06] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:10:13,675 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:13] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:10:16,987 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:10:51,074 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:12:32,472 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:12:32,473 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:12:32,474 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:12:32,849 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:12:32,854 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:12:36,110 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:36] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:12:39,974 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:39] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:12:41,387 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:41] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:13:12,397 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:13:12] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 16:13:12,408 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:13:12] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:13:12,451 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:13:12] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:13:15,627 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:13:15] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:13:15,662 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:13:15] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:17:27,069 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:17:27,070 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:17:27,072 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:17:27,431 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:17:27,435 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:17:30,396 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:30] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:17:34,237 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:34] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:17:35,547 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:18:11,479 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:11] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:18:19,396 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:18:22,553 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:22] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:21:38,936 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:21:38,937 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:21:38,939 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:21:39,372 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:21:39,377 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:21:48,546 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:21:48] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:28:25,051 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:28:25,051 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:28:25,053 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:28:25,485 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:28:25,489 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:28:29,096 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:29] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:28:32,554 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:32] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:28:36,284 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:36] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:28:42,615 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:42] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 16:28:42,672 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:42] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:28:42,688 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:42] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:28:42,910 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:42] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:28:42,916 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:42] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:30:32,458 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:30:32,459 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:30:32,463 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:30:32,839 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:30:32,843 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:30:45,667 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:30:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:30:51,590 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:30:51] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:31:21,455 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:21] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:31:21,479 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:21] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:31:25,147 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:25] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:31:31,366 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:31] "OPTIONS /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:31:31,383 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:31] "POST /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:31:31,397 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:31:31] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:06,079 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:36:06,097 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:36:06,099 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:36:06,461 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:36:06,465 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:36:08,904 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:08] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:36:12,947 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:12] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:36:14,693 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:14] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:21,505 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:22,706 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:22] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:24,408 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:24,781 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:25,141 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:25] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:25,515 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:25] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:34,791 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:34] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:38,016 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:38] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 16:36:38,027 - __main__ - INFO - Session deleted and hash added: 1be403821b99f016a5041700547cedea
+2025-05-02 16:36:38,034 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:38] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:36:38,043 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:36:43,486 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:36:43] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:37:22,080 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:22] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:37:22,104 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:22] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:37:27,050 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:27] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:37:29,059 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:29] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:37:29,071 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:29] "OPTIONS /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:37:29,082 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:29] "POST /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:37:29,090 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:37:29] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:43:17,239 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:43:17,240 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:43:17,243 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:43:17,656 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:43:17,660 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:43:30,055 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:43:30] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:43:34,786 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:43:34] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:43:38,567 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:43:38] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:43:40,902 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:43:40] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:44:24,503 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:44:24] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:44:24,533 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:44:24] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:44:27,865 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:44:27] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:44:47,524 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:44:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:45:26,323 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:26] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:32,354 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:32] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:35,882 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:36,970 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:36] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:37,433 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:37] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:38,017 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:38,498 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:38] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:40,529 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:40,746 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:45:44,099 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:45:44] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:46:21,303 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:46:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:46:23,427 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:46:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:46:24,271 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:46:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:46:24,567 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:46:24] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:47:39,185 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:47:39] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:47:39,193 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:47:39] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:47:49,949 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:47:49] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:47:51,890 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:47:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:47:57,083 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:47:57] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:48:16,723 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:16] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:48:41,161 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:41] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:48:41,174 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:41] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:48:44,546 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:44] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:48:48,033 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:48] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:48:48,040 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:48] "OPTIONS /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:48:48,055 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:48] "POST /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:48:48,068 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:48:48] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:51:29,232 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:51:29] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 16:51:29,355 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:51:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-02 16:57:46,457 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 16:57:46,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:57:46,459 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 16:57:46,855 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 16:57:46,859 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 16:57:53,985 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:57:53] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:57:57,875 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:57:57] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:58:02,778 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:02] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:58:07,644 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:07] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 16:58:07,654 - __main__ - INFO - Session deleted and hash added: eee9278cc56d531d3afbd44bb9257bb6
+2025-05-02 16:58:07,659 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:07] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:58:07,673 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:07] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:58:07,932 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:07] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:58:07,963 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:07] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:58:29,988 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:29] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:58:54,010 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:54] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:58:54,037 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:54] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:59:11,548 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:11] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:59:11,561 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:11] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:59:13,531 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:13] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:26,115 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:26] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:59:42,985 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:42] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 16:59:42,998 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:42] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 16:59:45,571 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:55,764 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:55] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 16:59:55,776 - __main__ - INFO - Session deleted and hash added: 21a6275fce918112641fbf4985276896
+2025-05-02 16:59:55,783 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:55] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 16:59:55,797 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:56,043 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:56] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:56,046 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:56] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 16:59:59,571 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:59,580 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "OPTIONS /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:59:59,592 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "POST /mark-session-done HTTP/1.1" 200 -
+2025-05-02 16:59:59,608 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:59,810 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 16:59:59,850 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:59:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:01:38,581 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:01:38,581 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:01:38,584 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 17:01:38,972 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 17:01:38,976 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 17:03:22,232 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:22] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:03:22,880 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:22] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:03:22,882 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:22] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:28,781 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:28] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:33,780 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:33] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:38,767 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:38] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:43,776 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:43] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:47,892 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:47] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:52,892 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:52] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:03:57,898 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:57] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:02,904 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:02] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:07,890 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:07] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:12,901 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:12] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:18,783 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:18] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:23,779 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:23] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:28,778 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:28] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:33,778 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:33] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:38,773 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:38] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:43,771 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:43] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:48,782 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:48] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:53,780 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:53] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:04:58,774 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:04:58] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:05:03,767 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:05:03] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:05:08,769 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:05:08] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:05:13,771 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:05:13] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:05:59,772 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:05:59] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:06:06,424 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:06] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:06:07,882 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:07] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:06:12,889 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:12] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:06:17,893 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:17] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:06:20,643 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:20] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 17:06:22,195 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:22] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:06:23,766 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:06:23] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:25,276 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:08:25,277 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:08:25,280 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 17:08:25,667 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 17:08:25,670 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 17:08:29,969 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:29] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:33,909 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:33] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:35,386 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:35] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:35,395 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:35] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:08:37,642 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:37] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 17:08:40,136 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:40] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:42,119 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:42] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 17:08:43,755 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:43] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:44,969 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:44] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:47,323 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:08:50,914 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:08:50] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 17:10:46,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 17:10:46,120 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:10:46,121 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 17:10:46,529 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 17:10:46,534 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 17:10:50,564 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:10:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:10:55,249 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:10:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:10:57,128 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:10:57] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:10:57,139 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:10:57] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:11:02,113 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:02] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 17:11:04,601 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:04] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 17:11:10,511 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:10] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:11:20,172 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:20] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:11:25,717 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:25] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:11:33,686 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:33] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 17:11:33,689 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:11:33] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:13:06,189 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 18:13:06,190 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 18:13:06,192 - werkzeug - INFO -  * Restarting with stat
+2025-05-02 18:13:06,550 - werkzeug - WARNING -  * Debugger is active!
+2025-05-02 18:13:06,554 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-02 18:13:10,054 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:10] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:13:14,247 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:14] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:13:43,551 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:43] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:13:51,011 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:51] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:13:54,621 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:54] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:13:58,211 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:58] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-02 18:13:58,227 - __main__ - INFO - Session deleted and hash added: 3feb449314744c35a22a61eada06641c
+2025-05-02 18:13:58,230 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:58] "POST /delete-session HTTP/1.1" 200 -
+2025-05-02 18:13:58,240 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:58] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:13:59,147 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:13:59,148 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:13:59] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:14:01,240 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:01] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:14:10,252 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:10] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:14:20,665 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:20] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:14:48,203 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:48] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 18:14:48,501 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:48] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 18:14:51,252 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:14:57,304 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:57] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:14:57,307 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:14:57] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:15:02,318 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:15:02] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:15:03,955 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:15:03] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:17:47,467 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:17:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:18:57,421 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:18:57] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:19:04,501 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:19:04] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:20:39,635 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:20:39] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 18:20:39,641 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:20:39] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 18:20:40,822 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:20:40] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:20:44,554 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:20:44] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:21:38,754 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:21:38] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-02 18:21:38,758 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:21:38] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-02 18:21:39,872 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:21:39] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-02 18:22:45,948 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:22:45] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-02 18:22:45,949 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:22:45] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:22:50,949 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:22:50] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:22:55,952 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:22:55] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:00,966 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:00] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:06,764 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:06] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:11,767 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:11] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:16,771 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:16] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:21,777 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:21] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:26,767 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:26] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:31,774 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:31] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:36,771 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:36] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:41,776 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:41] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:46,768 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:46] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:51,777 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:51] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:23:56,779 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:23:56] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:24:01,763 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:24:01] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:24:59,770 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:24:59] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-02 18:25:59,770 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 18:25:59] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:32:41,739 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 11:32:41,740 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-03 11:32:41,743 - werkzeug - INFO -  * Restarting with stat
+2025-05-03 11:32:42,113 - werkzeug - WARNING -  * Debugger is active!
+2025-05-03 11:32:42,119 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-03 11:32:46,732 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:32:46] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:32:50,898 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:32:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:32:56,026 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:32:56] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:32:56,038 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:32:56] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:33:01,024 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:01] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:33:01,262 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:01] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:33:06,623 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:06] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:33:06,625 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:06] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:33:11,626 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:11] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:33:15,470 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:15] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:33:23,390 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:33:23,400 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:23] "OPTIONS /mark-session-done HTTP/1.1" 200 -
+2025-05-03 11:33:23,411 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:23] "POST /mark-session-done HTTP/1.1" 200 -
+2025-05-03 11:33:23,449 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:23] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:33:26,396 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:26] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:33:26,423 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:26] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:33:28,931 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:28] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:33:32,271 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:32] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:33:44,854 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:44] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:33:46,112 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:33:46] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:03,711 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:03] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:10,296 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:10] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:13,631 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:13] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:13,639 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:13] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-03 11:34:16,974 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:16] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:34:21,760 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:21] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:21,760 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:21] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:27,212 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:27] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:28,601 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:28] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:30,002 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:30] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:31,692 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:31] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:31,706 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:31] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-03 11:34:32,208 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:32] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:36,745 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:36] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:34:37,206 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:37] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:37,535 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:37] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:37,545 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:37] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:41,762 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:41] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:43,202 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:43] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:44,131 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:44] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-03 11:34:45,378 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:45] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:47,047 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:47,646 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:47] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:48,210 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:48] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:53,205 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:53] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:58,202 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:58] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:34:59,360 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:59] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-03 11:34:59,370 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:34:59] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-03 11:35:03,204 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:35:03] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:35:07,874 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:35:07] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-03 11:35:09,789 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:35:09] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:35:32,329 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:35:32] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:35:34,440 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:35:34] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:49,318 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:49] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:50,244 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:52,044 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:52] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:53,696 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:53] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:55,491 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:56,897 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:56] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:58,441 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:58] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:36:59,095 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:36:59] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-03 11:37:02,264 - werkzeug - INFO - 127.0.0.1 - - [03/May/2025 11:37:02] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:26:06,527 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 11:26:06,528 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 11:26:06,530 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 11:26:06,953 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 11:26:06,999 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-05 11:26:12,581 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:26:12] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:26:15,592 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:26:15] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:26:51,875 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:26:51] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-05 11:26:51,977 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:26:51] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-05 11:26:55,135 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:26:55] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:27:48,803 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:27:48] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:28:08,012 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:08] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-05 11:28:08,027 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:08] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-05 11:28:11,200 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:28:42,555 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:42] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-05 11:28:42,624 - __main__ - INFO - Session deleted and hash added: 48d91bb668bab11c8eb0ab5fa7427c4f
+2025-05-05 11:28:42,630 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:42] "POST /delete-session HTTP/1.1" 200 -
+2025-05-05 11:28:42,678 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:42] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:28:45,849 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:28:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:29:00,801 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:00] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:29:08,509 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:08] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:29:08,529 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:08] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:29:13,518 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:13] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:29:18,522 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:18] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:29:22,960 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:22] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:29:27,452 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:27] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:29:27,463 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:27] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:29:45,954 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:45] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:29:45,964 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:45] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:29:56,197 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:56] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:29:56,210 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:29:56] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:30:05,556 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:05] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:30:13,594 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:13] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:30:16,963 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:16] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:30:16,965 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:16] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:21,971 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:21] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:26,970 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:26] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:31,979 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:31] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:36,966 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:36] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:41,967 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:41] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:46,968 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:46] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:51,973 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:51] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:30:56,979 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:30:56] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:31:02,229 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:31:02] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:32:39,035 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:32:39] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:32:46,191 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:32:46] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:32:46,970 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:32:46] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:42:10,656 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-05 11:42:10,657 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-05 11:42:10,658 - werkzeug - INFO -  * Restarting with stat
+2025-05-05 11:42:11,085 - werkzeug - WARNING -  * Debugger is active!
+2025-05-05 11:42:11,089 - werkzeug - INFO -  * Debugger PIN: 294-991-496
+2025-05-05 11:42:15,949 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:42:15] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:42:18,366 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:42:18] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:43:11,416 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:43:11] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:43:17,034 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:43:17] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:43:17,049 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:43:17] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:43:34,959 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:43:34] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:43:34,979 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:43:34] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:44:51,103 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:44:51] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:44:51,128 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:44:51] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:44:55,321 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:44:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:44:58,811 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:44:58] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:45:22,607 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:45:22] "OPTIONS /add-session HTTP/1.1" 200 -
+2025-05-05 11:45:22,620 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:45:22] "[35m[1mPOST /add-session HTTP/1.1[0m" 201 -
+2025-05-05 11:45:26,077 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:45:26] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:46:21,833 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:21] "OPTIONS /delete-session HTTP/1.1" 200 -
+2025-05-05 11:46:21,846 - __main__ - INFO - Session deleted and hash added: a6fd9dbe9443fee8d5c54b5cac2a6a2e
+2025-05-05 11:46:21,855 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:21] "POST /delete-session HTTP/1.1" 200 -
+2025-05-05 11:46:21,901 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:21] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:46:25,749 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:25] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:46:25,774 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:25] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:46:30,757 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:30] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:46:35,759 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:35] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:46:40,761 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:40] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:46:43,826 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:43] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:46:45,547 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:45] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:46:51,406 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:46:51,621 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:46:51] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:47:16,703 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:16] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:47:16,705 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:16] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:21,711 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:21] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:26,722 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:26] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:31,706 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:31] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:35,421 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:35] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:47:36,851 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:36] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:47:36,854 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:36] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:41,579 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:41] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:47:53,447 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:53] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:47:53,450 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:53] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:47:58,450 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:47:58] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:48:01,760 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:01] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:48:19,006 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:19] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:48:19,008 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:19] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:48:24,022 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:24] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:48:29,013 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:29] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:48:31,704 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:31] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:48:34,897 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:48:34] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:01,362 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:01] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:11,004 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:11] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:49:15,829 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:15] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:19,972 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:19] "OPTIONS /add-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:19,986 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:19] "[35m[1mPOST /add-timetable HTTP/1.1[0m" 201 -
+2025-05-05 11:49:38,747 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:38] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:39,892 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:39] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:39,895 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:39] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:49:44,907 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:44] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:49:46,488 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:46] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:50,286 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:50] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:53,495 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:53] "GET /get-sessions HTTP/1.1" 200 -
+2025-05-05 11:49:55,730 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:55] "GET /get-timetable HTTP/1.1" 200 -
+2025-05-05 11:49:55,732 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:49:55] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:50:00,737 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:00] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:50:05,742 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:05] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:50:10,745 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:10] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:50:15,738 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:15] "GET /get-dashboard-stats HTTP/1.1" 200 -
+2025-05-05 11:50:17,923 - werkzeug - INFO - 127.0.0.1 - - [05/May/2025 11:50:17] "GET /get-sessions HTTP/1.1" 200 -

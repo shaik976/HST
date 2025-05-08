@@ -121,3 +121,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Flask for the web framework
 - scikit-learn for the AI model
 - All contributors and users
+
+## Dashboard Task Statistics
+
+- **Tasks Completed:** Increments when you click the Done button for a session. Tracked persistently in `session_stats.json`.
+- **Tasks Deleted:** Increments when you click the Delete button for a session. Tracked persistently in `session_stats.json`.
+- **Tasks Ignored:** Counts sessions whose date is in the past and are neither completed nor deleted.
+
+The file `session_stats.json` is automatically created and updated to store hashes of completed and deleted sessions, ensuring your stats persist even if the server restarts.

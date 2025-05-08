@@ -1,30 +1,23 @@
 [
     {
-        "subject": "ACD",
-        "date": "2025-05-03",
-        "startTime": "11:45",
+        "subject": "EAI",
+        "date": "2025-05-12",
+        "startTime": "11:00",
         "duration": 50,
-        "description": "Padle Re Padle"
+        "description": "Essentials of Artificial Intelligence"
     },
     {
-        "subject": "fsd",
-        "date": "2025-05-04",
-        "startTime": "11:52",
+        "subject": "Reception",
+        "date": "2025-05-06",
+        "startTime": "12:30",
         "duration": 60,
-        "description": "full stack devlopment"
+        "description": "Something"
     },
     {
-        "subject": "aaa",
-        "date": "2025-05-02",
-        "startTime": "13:26",
-        "duration": 60,
-        "description": "tessssst"
-    },
-    {
-        "subject": "azzz",
-        "date": "2025-05-02",
-        "startTime": "13:28",
-        "duration": 60,
-        "description": "hhhhh"
+        "subject": "ACD",
+        "date": "2025-05-06",
+        "startTime": "12:45",
+        "duration": 50,
+        "description": "ACD Class"
     }
 ]
